@@ -1,0 +1,1025 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Fabrimak | Corte e Dobra, Corte a Laser e Soldagem</title>
+<meta name="description" content="Fabrimak: corte e dobra de chapas metálicas, corte a laser e soldagem para empresas e indústrias. Envie seu projeto e solicite um orçamento pelo WhatsApp.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Fabrimak | Corte e Dobra, Corte a Laser e Soldagem">
+<meta property="og:description" content="Peças metálicas fabricadas conforme o seu projeto. Corte e dobra de chapas, corte a laser e soldagem.">
+<meta property="og:image" content="media/poster.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0f0f1c">
+<!--
+  ============ CONFIGURAÇÃO PARA PUBLICAÇÃO ============
+  1) WhatsApp: altere WHATSAPP_NUMBER no script ao final (formato 55DDDNUMERO, só dígitos).
+  2) Google Tag Manager: descomente o bloco abaixo e troque GTM-XXXXXXX pelo ID real.
+     Google Ads e Meta Pixel devem ser configurados dentro do GTM, ouvindo os eventos do dataLayer:
+     whatsapp_click (cta_location), form_start, form_complete, form_submit_confirmed.
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
+  3) Dados estruturados (LocalBusiness): preencher somente com dados reais e descomentar.
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"LocalBusiness","name":"Fabrimak","url":"https://SEU_DOMINIO","telephone":"+55 ...","address":{"@type":"PostalAddress","streetAddress":"...","addressLocality":"...","addressRegion":"..","postalCode":"...","addressCountry":"BR"}}
+  </script>
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,800;1,900&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="preload" as="image" href="media/poster.jpg">
+<style>
+/* Layout: cinema-scroll hero (sticky, scrubbed real footage in an angled frame) → alternating ink / paper bands with Serie-M-style slanted slabs */
+:root{
+  --ink:#0f0f1c;        /* fundo principal escuro, grafite azulado */
+  --navy:#33325a;       /* azul-marinho da identidade de referência */
+  --navy-2:#44436f;
+  --steel:#a6a8bd;      /* cinza metálico */
+  --paper:#eef0f5;      /* claro levemente azulado */
+  --paper-2:#e2e4ec;
+  --white:#ffffff;
+  --text:#1b1b2c;
+  --muted:#5d5f76;
+  --muted-d:#a9abc0;
+  --line-d:rgba(255,255,255,.12);
+  --line-l:rgba(27,27,44,.12);
+  --spark:#ff6a1f;      /* laranja – detalhe, faísca */
+  --wa:#128a43;         /* verde WhatsApp (contraste AA com texto branco) */
+  --wa-hover:#0e7036;
+  --f-display:"Montserrat",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  --f-body:"Montserrat",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  --f-mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  --gut-l:max(16px, env(safe-area-inset-left, 0px));
+  --gut-r:max(16px, env(safe-area-inset-right, 0px));
+  --maxw:1240px;
+  --hdr:72px;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--hdr) + 8px)}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--ink);color:var(--white);font-family:var(--f-body);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--ink)}
+img,video{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:var(--f-display);line-height:1.08;margin:0;text-wrap:balance;letter-spacing:-.02em}
+p{margin:0}
+:focus-visible{outline:2px solid var(--spark);outline-offset:3px;border-radius:2px}
+.wrap{max-width:var(--maxw);margin:0 auto;padding-left:var(--gut-l);padding-right:var(--gut-r)}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}
+.skip{position:absolute;left:12px;top:-60px;z-index:100;background:var(--white);color:var(--ink);padding:10px 14px;font-weight:700;text-decoration:none}
+.skip:focus{top:12px}
+
+/* labels & slashes */
+.tag{font-family:var(--f-mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--steel);display:inline-flex;align-items:center;gap:10px}
+.tag b{color:var(--spark);font-weight:500}
+.slash{color:var(--spark);font-style:italic;font-weight:900;margin-right:.18em;letter-spacing:-.06em}
+.on-light .tag{color:var(--muted)}
+
+/* buttons */
+.btn{--h:52px;display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:var(--h);padding:0 24px;font-family:var(--f-display);font-weight:800;font-size:14px;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;border:0;cursor:pointer;transition:transform .2s ease,background .2s ease,color .2s ease,box-shadow .2s ease;clip-path:polygon(10px 0,100% 0,calc(100% - 10px) 100%,0 100%)}
+.btn svg{width:20px;height:20px;flex:none}
+.btn-wa{background:var(--white);color:var(--ink)}
+.btn-wa svg{color:var(--wa)}
+.btn-wa:hover{background:var(--spark);color:var(--white)}
+.btn-wa:hover svg{color:var(--white)}
+.btn-navy{background:var(--navy);color:var(--white)}
+.btn-navy:hover{background:var(--spark)}
+.btn-ghost{background:transparent;color:var(--white);box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.45);clip-path:none}
+.btn-ghost:hover{box-shadow:inset 0 0 0 1.5px var(--white);background:rgba(255,255,255,.06)}
+.btn:active{transform:translateY(1px)}
+/* Todos os botões que abrem o WhatsApp ficam verdes */
+.btn[data-wa]{background:var(--wa);color:var(--white);box-shadow:0 10px 24px -12px rgba(18,138,67,.9)}
+.btn[data-wa] svg{color:var(--white)}
+.btn[data-wa]:hover{background:var(--wa-hover);color:var(--white)}
+.btn[data-wa]:hover svg{color:var(--white)}
+.btn-row{display:flex;flex-wrap:wrap;gap:12px}
+
+/* ================= HEADER ================= */
+.hdr{position:fixed;top:env(safe-area-inset-top,0px);left:0;right:0;z-index:50;transition:background .3s ease,box-shadow .3s ease}
+.hdr.solid{background:rgba(15,15,28,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);box-shadow:0 1px 0 var(--line-d)}
+.hdr-in{height:var(--hdr);display:flex;align-items:center;gap:24px}
+.logo{display:inline-flex;align-items:center;gap:10px;text-decoration:none;color:var(--white);flex:none}
+.logo{color:var(--white)}
+.logo .logo-mark{height:54px;width:137px;display:block}
+footer .logo .logo-mark{height:70px;width:178px}
+.nav{margin-left:auto;display:flex;align-items:center;gap:4px}
+.nav a{font-size:13px;font-weight:600;letter-spacing:.04em;text-decoration:none;padding:10px 12px;color:rgba(255,255,255,.82);position:relative}
+.nav a:hover,.nav a.active{color:var(--white)}
+.nav a.active::after{content:"";position:absolute;left:12px;right:12px;bottom:4px;height:2px;background:var(--spark)}
+.hdr .btn{--h:42px;font-size:12px;padding:0 18px;margin-left:auto}
+@media (max-width:480px){.hdr .btn{--h:38px;font-size:11px;padding:0 14px;letter-spacing:.04em}.logo .logo-mark{height:40px;width:102px}}
+.burger{display:none;margin-left:auto;width:46px;height:46px;border:0;background:transparent;color:var(--white);cursor:pointer;align-items:center;justify-content:center}
+.burger span,.burger span::before,.burger span::after{display:block;width:22px;height:2px;background:currentColor;position:relative;transition:transform .25s ease,opacity .2s}
+.burger span::before,.burger span::after{content:"";position:absolute;left:0}
+.burger span::before{top:-7px}.burger span::after{top:7px}
+.burger[aria-expanded="true"] span{background:transparent}
+.burger[aria-expanded="true"] span::before{transform:translateY(7px) rotate(45deg)}
+.burger[aria-expanded="true"] span::after{transform:translateY(-7px) rotate(-45deg)}
+@media (max-width:1060px){
+  .nav{display:none}
+  .burger{display:inline-flex}
+  .nav.open{display:flex;position:fixed;top:calc(var(--hdr) + env(safe-area-inset-top,0px));left:0;right:0;bottom:0;flex-direction:column;align-items:stretch;gap:0;background:var(--ink);padding:16px var(--gut-r) 32px var(--gut-l);overflow:auto}
+  .nav.open a{font-size:20px;font-weight:700;padding:16px 4px;border-bottom:1px solid var(--line-d)}
+  .nav.open a.active::after{display:none}
+  .nav.open .btn{margin-top:24px;display:inline-flex;--h:54px;font-size:14px}
+}
+.nav .btn-mob{display:none}
+@media (max-width:1060px){.nav.open .btn-mob{display:inline-flex}}
+
+/* ================= HERO (scroll-scrub) ================= */
+.hero{position:relative;height:330vh;background:var(--ink)}
+.stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;isolation:isolate}
+.stage-bg{position:absolute;inset:-6%;z-index:-3;background:var(--ink) url("media/poster.jpg") center/cover;filter:blur(40px) saturate(.5) brightness(.45)}
+.stage-bg canvas{width:100%;height:100%;display:block}
+.stage::before{content:"";position:absolute;inset:0;z-index:-2;background:
+  linear-gradient(90deg,rgba(15,15,28,.96) 0%,rgba(15,15,28,.82) 42%,rgba(15,15,28,.35) 100%),
+  repeating-linear-gradient(0deg,rgba(255,255,255,.025) 0 1px,transparent 1px 4px)}
+/* slanted slabs (from the reference art) */
+.slab{position:absolute;z-index:-1;pointer-events:none}
+.slab.a{right:7%;top:9%;width:min(30vw,420px);height:78%;background:var(--navy);clip-path:polygon(22% 0,100% 0,78% 100%,0 100%);opacity:.9}
+.slab.b{right:calc(7% + min(30vw,420px) - 40px);top:4%;width:70px;height:34%;background:var(--steel);opacity:.22;clip-path:polygon(40% 0,100% 0,60% 100%,0 100%)}
+.stage-grid{position:relative;height:100%;max-width:1360px;margin:0 auto;padding:calc(var(--hdr) + 24px) var(--gut-r) 56px var(--gut-l);display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:48px}
+.frame{position:relative;height:min(78vh,780px);aspect-ratio:9/16;max-width:100%;justify-self:end;margin-right:4vw;box-shadow:0 40px 80px -30px rgba(0,0,0,.8)}
+.frame video,.frame img.poster{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;background:#1a1a2c}
+.frame img.poster{z-index:0}
+.frame video{z-index:1}
+.brk{position:absolute;width:26px;height:26px;border:2px solid rgba(255,255,255,.85);z-index:3;pointer-events:none}
+.brk.tl{left:-10px;top:-10px;border-right:0;border-bottom:0}
+.brk.tr{right:-10px;top:-10px;border-left:0;border-bottom:0}
+.brk.bl{left:-10px;bottom:-10px;border-right:0;border-top:0}
+.brk.br{right:-10px;bottom:-10px;border-left:0;border-top:0}
+.hud{position:absolute;z-index:3;font-family:var(--f-mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.9);text-shadow:0 1px 6px rgba(0,0,0,.6);pointer-events:none}
+.hud.rec{left:14px;top:14px;display:flex;gap:8px;align-items:center}
+.hud.rec i{width:8px;height:8px;border-radius:50%;background:var(--spark);box-shadow:0 0 10px var(--spark);animation:blink 1.2s steps(2,start) infinite}
+@keyframes blink{to{visibility:hidden}}
+.hud.meta{right:14px;top:14px;text-align:right;color:rgba(255,255,255,.7)}
+.hud.foot{left:14px;right:14px;bottom:14px;display:flex;justify-content:space-between;gap:8px}
+.hud.foot .scrub{color:var(--spark)}
+.real-badge{position:absolute;z-index:3;left:14px;bottom:14px;font-family:var(--f-mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;background:rgba(15,15,28,.7);padding:5px 8px;color:var(--steel)}
+.side-txt{position:absolute;left:max(10px, env(safe-area-inset-left,0px));top:50%;transform:translateY(-50%) rotate(180deg);writing-mode:vertical-rl;font-family:var(--f-mono);font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:rgba(255,255,255,.35);z-index:2}
+.chapters{position:relative;min-height:420px;max-width:640px}
+.ch{position:absolute;left:0;right:0;top:50%;transform:translateY(-50%);transition:opacity .5s ease,transform .6s cubic-bezier(.2,.7,.2,1),visibility .5s;opacity:0;visibility:hidden}
+.ch.on{opacity:1;visibility:visible}
+.ch.past{transform:translateY(calc(-50% - 40px))}
+.ch.future{transform:translateY(calc(-50% + 40px))}
+.ch .tag{margin-bottom:22px}
+.hero h1{font-size:clamp(38px,5.4vw,76px);font-weight:900;letter-spacing:-.035em}
+.hero h1 em{font-style:italic;color:var(--steel);font-weight:800}
+.ch h2{font-size:clamp(34px,4.6vw,64px);font-weight:900;font-style:italic;letter-spacing:-.035em}
+.hero .lead{margin-top:22px;font-size:clamp(16px,1.35vw,19px);color:rgba(255,255,255,.8);max-width:52ch;font-weight:500}
+.hero .btn-row{margin-top:32px}
+.specs{margin-top:28px;display:grid;gap:0;max-width:520px;border-top:1px solid var(--line-d)}
+.specs div{display:grid;grid-template-columns:150px 1fr;gap:16px;padding:12px 0;border-bottom:1px solid var(--line-d);font-size:15px}
+.specs dt{font-family:var(--f-mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--steel);padding-top:3px}
+.specs dd{margin:0;font-weight:600}
+.progress{position:absolute;left:var(--gut-l);right:var(--gut-r);bottom:22px;display:flex;align-items:center;gap:16px;max-width:1300px;margin:0 auto;font-family:var(--f-mono);font-size:11px;letter-spacing:.14em;color:rgba(255,255,255,.55);text-transform:uppercase;z-index:2}
+.progress .bar{flex:1;height:2px;background:rgba(255,255,255,.14);position:relative;overflow:hidden}
+.progress .bar i{position:absolute;inset:0;transform-origin:left;transform:scaleX(0);background:var(--spark)}
+.scroll-hint{display:inline-flex;align-items:center;gap:8px}
+.scroll-hint::after{content:"";width:1px;height:16px;background:currentColor;animation:hint 1.6s ease-in-out infinite}
+@keyframes hint{0%,100%{transform:translateY(-3px);opacity:.4}50%{transform:translateY(3px);opacity:1}}
+
+@media (max-width:900px){
+  .hero{height:300vh}
+  .stage::before{background:linear-gradient(180deg,rgba(15,15,28,.55) 0%,rgba(15,15,28,.05) 25%,rgba(15,15,28,.75) 45%,rgba(15,15,28,.97) 75%)}
+  .slab,.side-txt,.stage-bg{display:none}
+  .stage-grid{display:block;padding:0}
+  .frame{position:absolute;left:0;top:0;width:100%;height:100%;aspect-ratio:auto;max-width:none;margin:0;z-index:-3;box-shadow:none}
+  .brk{display:none}
+  .hud.rec{top:calc(var(--hdr) + 10px);left:var(--gut-l)}
+  .hud.meta{top:calc(var(--hdr) + 10px);right:var(--gut-r)}
+  .hud.foot{display:none}
+  .real-badge{top:calc(var(--hdr) + 12px);bottom:auto;left:var(--gut-l)}
+  .chapters{position:absolute;left:var(--gut-l);right:var(--gut-r);bottom:64px;min-height:0;height:62%;max-width:none}
+  .ch{top:auto;bottom:0;transform:none}
+  .ch.past{transform:translateY(-24px)}
+  .ch.future{transform:translateY(24px)}
+  .hero .btn-row .btn{flex:1 1 220px}
+  .specs div{grid-template-columns:1fr;gap:2px;padding:9px 0}
+  .progress{bottom:max(18px, env(safe-area-inset-bottom,0px))}
+}
+@media (max-width:900px) and (max-height:700px){.hero .lead{display:none}}
+
+/* reduced motion / no-scrub fallback: chapters stacked, no sticky */
+.static-hero .hero{height:auto}
+.static-hero .stage{position:relative;height:auto;min-height:100svh}
+.static-hero .chapters{position:relative;min-height:0}
+.static-hero .ch{position:relative;top:auto;transform:none;opacity:1;visibility:visible;display:none}
+.static-hero .ch[data-i="0"]{display:block}
+.static-hero .progress{display:none}
+@media (max-width:900px){
+  .static-hero .stage-grid{padding:calc(var(--hdr) + 40vh) var(--gut-r) 48px var(--gut-l)}
+  .static-hero .chapters{left:auto;right:auto;bottom:auto;height:auto}
+}
+
+/* ================= SECTIONS ================= */
+section.band{position:relative;padding-block:clamp(72px,10vw,136px);overflow:hidden}
+.on-light{background:var(--paper);color:var(--text)}
+.on-light-2{background:var(--paper-2);color:var(--text)}
+.on-navy{background:var(--navy);color:var(--white)}
+.h2{font-size:clamp(30px,4vw,54px);font-weight:900}
+.h2 i{font-weight:800}
+.sec-head{display:grid;gap:18px;max-width:780px;margin-bottom:clamp(36px,5vw,64px)}
+.sec-head p{font-size:18px;color:var(--muted);max-width:60ch}
+.on-dark-txt .sec-head p,.on-navy .sec-head p{color:var(--muted-d)}
+
+/* --- empresa --- */
+.about{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:clamp(32px,6vw,96px);align-items:start}
+.about .h2{font-size:clamp(32px,4.4vw,60px)}
+.about-txt{display:grid;gap:18px;font-size:18px;color:var(--muted);padding-top:12px}
+.about-txt strong{color:var(--text)}
+.pillars{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;margin-top:clamp(40px,6vw,72px);border-top:2px solid var(--text)}
+.pillar{padding:22px 24px 0 0}
+.pillar + .pillar{padding-left:24px;border-left:1px solid var(--line-l)}
+.pillar .tag{margin-bottom:10px}
+.pillar h3{font-size:20px;font-weight:800;margin-bottom:6px}
+.pillar p{color:var(--muted);font-size:15px}
+.deco-slab{position:absolute;right:-60px;top:0;width:260px;height:100%;background:var(--paper-2);clip-path:polygon(45% 0,100% 0,55% 100%,0 100%);z-index:0}
+.band > .wrap{position:relative;z-index:1}
+@media (max-width:800px){.about,.pillars{grid-template-columns:1fr}.pillar+.pillar{padding-left:0;border-left:0;border-top:1px solid var(--line-l)}.pillar{padding:20px 0}}
+
+/* --- corte e dobra --- */
+.svc-cd{background:var(--ink)}
+.svc-cd::before{content:"";position:absolute;left:-8%;top:0;bottom:0;width:46%;background:var(--navy);clip-path:polygon(0 0,100% 0,78% 100%,0 100%);opacity:.55}
+.cd-grid{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);gap:clamp(32px,6vw,88px);align-items:center}
+.cd-media{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:start}
+.cd-media figure{margin:0;position:relative;background:#1a1a2c}
+.cd-media figure img{width:100%;aspect-ratio:9/14;object-fit:cover}
+.cd-media figure:nth-child(2){margin-top:72px}
+.cd-media figcaption,.cap{position:absolute;left:0;bottom:0;font-family:var(--f-mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;padding:6px 9px;background:rgba(15,15,28,.82);color:var(--steel)}
+.cd-media .brk{border-color:var(--spark)}
+.svc-copy{display:grid;gap:24px}
+.svc-copy .lead{font-size:18px;color:var(--muted-d);max-width:56ch}
+.on-light .svc-copy .lead,.on-light-2 .svc-copy .lead{color:var(--muted)}
+.lists{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:4px}
+.lists h3{font-family:var(--f-mono);font-size:12px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--steel);margin-bottom:12px}
+.on-light .lists h3,.on-light-2 .lists h3{color:var(--muted)}
+.check{list-style:none;margin:0;padding:0;display:grid;gap:10px;font-size:15px;font-weight:500}
+.check li{display:grid;grid-template-columns:18px 1fr;gap:10px;align-items:start}
+.check li::before{content:"";width:12px;height:12px;margin-top:6px;background:var(--spark);clip-path:polygon(35% 0,100% 0,65% 100%,0 100%)}
+@media (max-width:900px){.cd-grid{grid-template-columns:1fr}.cd-media{max-width:520px}.svc-cd::before{width:90%;opacity:.35}}
+@media (max-width:560px){.lists{grid-template-columns:1fr}.cd-media figure:nth-child(2){margin-top:40px}}
+
+/* --- corte a laser --- */
+.laser-band{position:relative;margin-bottom:clamp(36px,5vw,64px);display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(28px,4vw,56px);align-items:center}
+.laser-band .laser-title{order:-1}
+.ph{position:relative;background:
+  linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px) 0 0/40px 40px,
+  linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px) 0 0/40px 40px,
+  radial-gradient(ellipse at 70% 60%,rgba(255,106,31,.22),transparent 55%),
+  var(--ink);color:var(--white);display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden}
+.ph-label{display:grid;gap:6px;justify-items:center;padding:16px;font-family:var(--f-mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--steel);max-width:36ch}
+.ph-label strong{color:var(--white);font-weight:500}
+.ph-label svg{width:34px;height:34px;color:var(--spark);margin-bottom:6px}
+.laser-media{position:relative;aspect-ratio:16/9;max-width:100%;background:var(--ink);clip-path:polygon(6% 0,100% 0,100% 100%,0 100%);overflow:hidden}
+.laser-media video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
+.cd-media figure video{width:100%;aspect-ratio:9/14;object-fit:cover;background:#1a1a2c}
+.laser-title{position:relative}
+.laser-title::after{content:"";position:absolute;right:-56px;top:0;bottom:0;width:57px;background:var(--paper-2);clip-path:polygon(0 0,0 100%,100% 100%)}
+.laser-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:clamp(32px,5vw,72px);align-items:start}
+.tiles{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2px;background:var(--line-l);border:1px solid var(--line-l)}
+.tile{background:var(--paper);padding:22px;display:grid;gap:8px;align-content:start}
+.tile .tag{font-size:11px}
+.tile h3{font-size:17px;font-weight:800;letter-spacing:-.01em}
+.tile p{font-size:14px;color:var(--muted)}
+.tile.wide{grid-column:1/-1;background:var(--navy);color:var(--white)}
+.tile.wide p{color:var(--muted-d)}
+.tile.wide .tag{color:var(--steel)}
+@media (max-width:900px){.laser-grid{grid-template-columns:1fr}.laser-band{grid-template-columns:1fr}.laser-band .laser-title{order:0}.laser-media{clip-path:none}}
+.laser-title::after{display:none}
+@media (max-width:520px){.tiles{grid-template-columns:1fr}}
+
+/* --- diferenciais --- */
+.why-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--line-d);border:1px solid var(--line-d)}
+.why{background:var(--ink);padding:28px;display:grid;gap:10px;align-content:start}
+.why svg{width:28px;height:28px;color:var(--steel)}
+.why h3{font-size:19px;font-weight:800}
+.why p{color:var(--muted-d);font-size:15px}
+.why.feature{grid-column:span 2;grid-row:span 2;background:var(--navy);padding:clamp(28px,4vw,48px);align-content:end;gap:16px;position:relative;overflow:hidden}
+.why.feature::before{content:"";position:absolute;right:-40px;top:-20px;width:220px;height:140%;background:var(--navy-2);clip-path:polygon(40% 0,100% 0,60% 100%,0 100%);opacity:.7}
+.why.feature > *{position:relative}
+.why.feature h3{font-size:clamp(26px,3vw,38px);font-weight:900;font-style:italic}
+.why.feature p{font-size:17px;max-width:52ch;color:rgba(255,255,255,.82)}
+.why.feature svg{color:var(--spark);width:40px;height:40px}
+@media (max-width:900px){.why-grid{grid-template-columns:1fr 1fr}.why.feature{grid-column:1/-1;grid-row:auto}}
+@media (max-width:560px){.why-grid{grid-template-columns:1fr}}
+
+/* --- projetos / galeria --- */
+.gal-top{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:36px}
+.gal-top .sec-head{margin-bottom:0}
+.gal-nav{display:flex;gap:8px}
+.gal-nav button{width:48px;height:48px;border:1.5px solid rgba(255,255,255,.35);background:transparent;color:var(--white);cursor:pointer;display:grid;place-items:center}
+.gal-nav button:hover{border-color:var(--white);background:rgba(255,255,255,.06)}
+.gal-nav svg{width:20px;height:20px}
+.gallery{display:grid;grid-auto-flow:column;grid-auto-columns:clamp(240px,26vw,340px);gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:18px;scrollbar-width:thin;scrollbar-color:var(--steel) transparent;overscroll-behavior-x:contain}
+.gallery::-webkit-scrollbar{height:4px}.gallery::-webkit-scrollbar-thumb{background:var(--steel)}
+.gcard{scroll-snap-align:start;margin:0;position:relative;display:grid;grid-template-rows:auto auto;gap:12px}
+.gcard .m{position:relative;aspect-ratio:3/4;overflow:hidden;background:#1a1a2c}
+.gcard .m img{width:100%;height:100%;object-fit:cover;transition:transform .7s cubic-bezier(.2,.7,.2,1)}
+.gcard:hover .m img{transform:scale(1.04)}
+.gcard .m.ph{aspect-ratio:3/4}
+.gcard .num{position:absolute;left:10px;top:10px;z-index:2;font-family:var(--f-mono);font-size:11px;background:rgba(15,15,28,.75);padding:4px 8px;border-radius:999px}
+.gcard figcaption{display:grid;gap:2px}
+.gcard figcaption b{font-size:16px;font-weight:800}
+.gcard figcaption span{font-family:var(--f-mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--steel)}
+.gcard figcaption span.real{color:var(--spark)}
+.talk{margin-top:clamp(40px,6vw,72px);display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;padding:28px clamp(20px,3vw,40px);background:var(--ink);clip-path:polygon(0 0,100% 0,calc(100% - 24px) 100%,0 100%)}
+.talk p{font-size:clamp(18px,2vw,24px);font-weight:800;max-width:40ch}
+.talk p span{display:block;font-size:15px;font-weight:500;color:var(--muted-d);margin-top:4px}
+
+/* --- segmentos --- */
+.seg-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.seg{display:grid;grid-template-columns:44px 1fr;gap:16px;align-items:start;padding:22px;background:var(--white);border-left:3px solid var(--navy)}
+.seg svg{width:30px;height:30px;color:var(--navy)}
+.seg h3{font-size:17px;font-weight:800;margin-bottom:4px}
+.seg p{font-size:14px;color:var(--muted)}
+.note{margin-top:22px;font-size:14px;color:var(--muted);max-width:70ch}
+@media (max-width:900px){.seg-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.seg-grid{grid-template-columns:1fr}}
+
+/* --- como funciona --- */
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;counter-reset:s}
+.step{position:relative;padding:28px 26px 0 0;border-top:2px solid var(--line-l);display:grid;gap:10px;align-content:start}
+.step::before{counter-increment:s;content:"0" counter(s);font-family:var(--f-display);font-weight:900;font-style:italic;font-size:46px;line-height:1;color:var(--navy);letter-spacing:-.04em}
+.step::after{content:"";position:absolute;left:0;top:-2px;width:48px;height:2px;background:var(--spark)}
+.step h3{font-size:18px;font-weight:800}
+.step p{font-size:15px;color:var(--muted)}
+.steps-cta{margin-top:44px;display:flex;flex-wrap:wrap;gap:16px;align-items:center}
+.steps-cta p{color:var(--muted);font-size:15px}
+.link-arrow{font-weight:800;font-size:14px;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;color:var(--navy);display:inline-flex;align-items:center;gap:8px;border-bottom:2px solid var(--spark);padding-bottom:4px}
+.link-arrow:hover{color:var(--spark)}
+@media (max-width:900px){.steps{grid-template-columns:1fr 1fr;row-gap:36px}}
+@media (max-width:560px){.steps{grid-template-columns:1fr}}
+
+/* --- faq --- */
+.faq-grid{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(32px,6vw,96px);align-items:start}
+.faq{border-top:1px solid var(--line-l)}
+.faq details{border-bottom:1px solid var(--line-l)}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:20px;align-items:center;padding:20px 0;font-weight:700;font-size:17px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"";flex:none;width:14px;height:14px;background:
+  linear-gradient(var(--text),var(--text)) center/14px 2px no-repeat,
+  linear-gradient(var(--text),var(--text)) center/2px 14px no-repeat;transition:transform .25s ease}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq summary:hover{color:var(--navy)}
+.faq .ans{padding:0 36px 22px 0;color:var(--muted);font-size:16px;display:grid;gap:10px}
+@media (max-width:900px){.faq-grid{grid-template-columns:1fr}}
+
+/* --- final CTA + form --- */
+.final{background:var(--ink);position:relative}
+.final::before{content:"";position:absolute;inset:0;background:url("media/peca-dobrada.webp") center 40%/cover;opacity:.16;filter:grayscale(1)}
+.final::after{content:"";position:absolute;right:-6%;top:0;bottom:0;width:58%;background:var(--navy);clip-path:polygon(18% 0,100% 0,100% 100%,0 100%);opacity:.92}
+.final-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(32px,6vw,96px);align-items:center}
+.final h2{font-size:clamp(34px,4.8vw,66px);font-weight:900}
+.final .lead{margin-top:20px;font-size:18px;color:rgba(255,255,255,.8);max-width:46ch}
+.final-points{margin-top:28px}
+form.quote{display:grid;gap:14px}
+.quote .row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.fld{display:grid;gap:6px;min-width:0}
+.fld label,.fld legend{font-family:var(--f-mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--steel)}
+.fld label .opt{color:rgba(255,255,255,.45);text-transform:none;letter-spacing:0}
+.fld input,.fld select,.fld textarea{width:100%;font:500 16px/1.4 var(--f-body);color:var(--white);background:rgba(15,15,28,.55);border:1px solid rgba(255,255,255,.22);padding:13px 14px;border-radius:0;transition:border-color .2s}
+.fld textarea{min-height:110px;resize:vertical}
+.fld select{appearance:none;background-image:linear-gradient(45deg,transparent 50%,var(--steel) 50%),linear-gradient(135deg,var(--steel) 50%,transparent 50%);background-position:calc(100% - 20px) 55%,calc(100% - 15px) 55%;background-size:5px 5px;background-repeat:no-repeat}
+.fld select option{background:var(--ink)}
+.fld input:focus,.fld select:focus,.fld textarea:focus{outline:none;border-color:var(--spark)}
+.fld[data-err] input,.fld[data-err] select,.fld[data-err] textarea{border-color:#ff8a65}
+.err{font-size:13px;color:#ffb199;min-height:0}
+.fld input[type=file]{padding:10px;font-size:14px}
+.fld input[type=file]::file-selector-button{font:700 12px var(--f-body);text-transform:uppercase;letter-spacing:.06em;border:0;background:var(--white);color:var(--ink);padding:8px 12px;margin-right:12px;cursor:pointer}
+.file-note{font-size:13px;color:rgba(255,255,255,.7);border-left:2px solid var(--spark);padding-left:10px}
+.quote .btn{width:100%;--h:58px;font-size:15px}
+.form-status{font-size:14px;color:rgba(255,255,255,.85)}
+.privacy{font-size:12px;color:rgba(255,255,255,.55)}
+@media (max-width:900px){.final-grid{grid-template-columns:1fr}.final::after{width:100%;right:0;top:auto;height:62%;clip-path:polygon(0 8%,100% 0,100% 100%,0 100%)}}
+@media (max-width:520px){.quote .row{grid-template-columns:1fr}}
+
+/* --- footer --- */
+footer{background:#0a0a14;color:var(--muted-d);padding-block:64px calc(40px + env(safe-area-inset-bottom,0px));font-size:15px}
+.ft{display:grid;grid-template-columns:1.3fr .8fr 1.5fr;gap:40px}
+.ft h3{font-family:var(--f-mono);font-size:11px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--steel);margin-bottom:14px}
+.ft ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.ft a{text-decoration:none;color:rgba(255,255,255,.82)}
+.ft a:hover{color:var(--white)}
+.ft .about-ft{display:grid;gap:16px;align-content:start}
+.ft .pending{font-family:var(--f-mono);font-size:12px;color:rgba(255,255,255,.4)}
+.map-li{display:grid;gap:10px;margin-block:4px}
+.map-box{position:relative;width:100%;max-width:100%;aspect-ratio:16/10;background:var(--navy);border:1px solid var(--line-d);overflow:hidden}
+.map-box iframe{position:absolute;inset:0;width:100%;height:100%;border:0;z-index:1}
+.map-fallback{position:absolute;inset:0;display:grid;place-content:center;justify-items:center;gap:6px;text-align:center;text-decoration:none;color:var(--white);background:
+  linear-gradient(rgba(255,255,255,.06) 1px,transparent 1px) 0 0/28px 28px,
+  linear-gradient(90deg,rgba(255,255,255,.06) 1px,transparent 1px) 0 0/28px 28px,var(--navy)}
+.map-fallback svg{width:34px;height:34px;color:var(--spark)}
+.map-fallback b{font-size:15px}
+.map-fallback span{font-family:var(--f-mono);font-size:11px;color:var(--muted-d)}
+.map-fallback:hover b{text-decoration:underline}
+.map-link{display:inline-flex;gap:8px;align-items:center;font-weight:600;font-size:14px}
+.map-link svg{width:18px;height:18px;flex:none;color:var(--spark)}
+.map-link span{display:grid;gap:2px;text-decoration:underline;text-decoration-color:rgba(255,255,255,.3);text-underline-offset:3px}
+.map-link small{font-family:var(--f-mono);font-size:11px;font-weight:400;color:var(--muted-d);text-decoration:none}
+.map-link:hover span{text-decoration-color:var(--white)}
+.legal{margin-top:48px;padding-top:22px;border-top:1px solid var(--line-d);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13px}
+@media (max-width:900px){.ft{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.ft{grid-template-columns:1fr}}
+
+/* --- floating WhatsApp --- */
+.wa-float{position:fixed;right:calc(18px + env(safe-area-inset-right,0px));bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:45;display:inline-flex;align-items:center;gap:10px;height:58px;padding:0 20px 0 16px;border-radius:999px;background:var(--wa);color:#fff;text-decoration:none;font-weight:800;font-size:14px;box-shadow:0 12px 30px -8px rgba(0,0,0,.55);transition:transform .25s ease,opacity .25s ease}
+.wa-float svg{width:28px;height:28px}
+.wa-float:hover{transform:translateY(-2px)}
+.wa-float.hide{opacity:0;transform:translateY(16px);pointer-events:none}
+@media (max-width:640px){.wa-float{width:58px;padding:0;justify-content:center}.wa-float span{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}}
+
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+</style>
+
+</head>
+<body>
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
+
+<!-- Ícones reutilizáveis -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2Zm0 18.15c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24 4.54 0 8.24 3.7 8.24 8.24 0 4.55-3.7 8.24-8.24 8.24Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.43-.06-.13-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48a.92.92 0 0 0-.66.31c-.23.25-.87.85-.87 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.1-.22-.16-.47-.29Z"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" d="M4 12h15m-6-6 6 6-6 6"/></symbol>
+    <symbol id="i-arrow-l" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" d="M20 12H5m6-6-6 6 6 6"/></symbol>
+    <symbol id="i-cam" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" d="M3 7h4l2-2h6l2 2h4v12H3z"/><circle cx="12" cy="13" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/></symbol>
+    <symbol id="i-laser" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" d="M12 2v9m0 0-3 4h6l-3-4Zm-7 9h14M4 19h16M7 15l-2 4m12-4 2 4"/></symbol>
+    <symbol id="i-logo" viewBox="31 22 564 222"><path fill="currentColor" fill-rule="evenodd" d="M315.00 162.75 L305.00 162.66 L303.12 162.02 L300.62 161.90 L298.75 161.32 L295.38 160.74 L293.38 160.03 L291.50 159.72 L289.12 158.88 L281.50 155.44 L276.75 152.85 L271.38 149.12 L269.50 147.46 L267.38 145.93 L259.83 138.38 L256.48 134.12 L253.97 130.25 L251.25 125.51 L249.62 123.39 L248.75 122.88 L246.12 122.45 L189.12 122.46 L188.25 122.29 L187.24 121.75 L186.46 121.12 L186.00 120.38 L185.70 118.25 L185.79 113.50 L186.12 112.62 L186.60 112.00 L187.45 111.25 L188.25 110.94 L239.75 110.90 L241.00 110.76 L242.62 110.21 L243.38 109.85 L243.92 109.25 L244.57 107.62 L244.65 106.75 L244.23 105.25 L244.14 103.12 L243.79 101.88 L242.84 100.50 L241.50 99.59 L240.50 99.44 L143.00 99.43 L141.88 99.14 L140.67 98.38 L140.03 97.62 L139.43 96.38 L139.18 94.88 L139.20 91.25 L139.42 90.25 L140.15 88.88 L140.79 88.25 L141.88 87.85 L144.00 87.51 L241.38 87.56 L242.63 86.50 L243.83 84.75 L244.69 80.12 L244.62 79.12 L244.11 78.00 L243.38 77.13 L242.50 76.60 L241.25 76.40 L189.62 76.39 L187.00 75.50 L186.39 75.00 L186.02 74.38 L185.68 72.12 L185.71 68.12 L185.97 66.38 L186.38 65.74 L187.09 65.25 L189.00 64.41 L190.25 64.20 L247.88 64.25 L248.75 64.10 L249.51 63.62 L250.84 62.12 L253.11 58.00 L256.13 53.38 L257.65 51.25 L260.00 48.62 L261.36 46.75 L266.12 41.98 L273.25 36.40 L280.00 32.25 L284.00 30.25 L292.38 27.04 L298.25 25.46 L300.25 25.31 L302.25 24.71 L305.12 24.62 L306.62 24.06 L307.75 23.94 L318.38 23.96 L320.71 24.62 L323.50 24.68 L325.62 25.30 L328.12 25.53 L331.25 26.33 L339.38 29.20 L346.88 32.86 L350.38 34.97 L355.38 38.46 L361.54 43.75 L363.84 46.12 L368.54 51.62 L369.65 53.62 L371.50 56.12 L375.38 62.88 L376.00 63.41 L377.50 64.19 L435.75 64.19 L438.87 65.12 L439.38 65.51 L439.75 66.12 L440.47 68.88 L440.47 71.62 L440.22 72.75 L439.62 74.31 L438.98 75.12 L438.25 75.59 L436.12 76.36 L384.50 76.40 L383.38 76.57 L382.50 77.16 L381.78 78.12 L381.27 79.75 L381.18 80.62 L382.06 85.25 L383.88 87.19 L384.50 87.61 L481.88 87.51 L483.88 87.77 L484.75 88.09 L485.50 88.85 L486.24 90.12 L486.61 92.12 L486.60 95.25 L486.29 96.75 L485.75 97.75 L484.99 98.50 L483.88 99.14 L482.75 99.43 L385.88 99.44 L383.62 99.80 L382.62 100.54 L381.89 101.88 L381.68 102.75 L381.62 104.62 L381.18 106.50 L381.72 108.75 L382.08 109.50 L382.62 109.96 L384.38 110.68 L386.25 110.92 L437.75 110.95 L438.62 111.27 L439.42 112.00 L440.34 114.25 L440.49 118.12 L440.29 119.25 L439.73 120.62 L439.12 121.39 L438.00 122.14 L436.75 122.45 L379.75 122.45 L377.50 122.78 L376.50 123.40 L374.95 125.12 L369.84 133.50 L365.12 139.21 L358.25 146.14 L354.25 149.30 L352.00 150.85 L347.38 153.80 L344.03 155.62 L336.75 158.88 L334.38 159.72 L332.12 160.12 L330.25 160.78 L327.75 161.21 L325.75 161.80 L322.62 162.03 L320.88 162.66 L315.00 162.75ZM317.46 151.12 L319.62 150.54 L322.12 150.40 L324.00 149.80 L326.12 149.58 L331.62 148.14 L335.00 146.72 L341.12 143.72 L346.62 140.26 L350.00 137.62 L353.79 134.12 L356.46 131.25 L359.54 127.50 L363.30 121.50 L367.01 113.50 L368.56 109.00 L369.28 105.38 L369.44 103.62 L369.94 102.00 L370.11 96.88 L370.72 94.88 L370.73 91.88 L370.15 89.88 L370.07 85.75 L369.41 83.50 L369.30 81.25 L366.93 73.00 L362.62 64.40 L358.82 58.38 L355.38 54.85 L351.49 50.50 L346.00 46.28 L339.76 42.38 L332.59 39.25 L327.75 37.75 L326.12 37.58 L324.38 37.07 L320.00 36.28 L315.88 35.90 L313.75 36.17 L311.62 36.13 L310.00 35.89 L308.38 36.15 L305.75 36.25 L298.25 37.74 L293.50 39.22 L290.75 40.39 L289.00 40.93 L286.25 42.20 L284.50 43.07 L281.38 45.17 L274.63 50.12 L272.98 52.12 L269.12 55.62 L267.80 57.25 L266.59 59.25 L264.97 61.25 L260.82 68.38 L260.14 69.88 L259.68 71.50 L258.97 72.88 L258.05 75.88 L257.76 77.50 L256.98 79.00 L256.84 80.88 L256.10 83.00 L256.00 84.75 L255.48 87.12 L255.35 94.50 L255.41 96.88 L255.65 98.50 L255.60 100.00 L256.12 102.25 L256.19 104.25 L256.94 106.62 L257.29 108.88 L258.84 113.50 L260.41 117.50 L262.06 120.25 L263.16 122.75 L264.96 125.25 L266.92 128.50 L270.14 132.00 L271.36 133.75 L274.82 136.62 L277.75 139.36 L284.00 143.36 L288.50 145.68 L294.25 148.14 L295.67 148.38 L300.75 149.79 L305.25 150.62 L306.75 150.68 L308.38 151.08 L317.46 151.12ZM303.75 122.39 L283.88 122.46 L282.88 122.18 L282.41 121.50 L282.40 120.75 L282.98 118.88 L283.10 116.50 L283.69 114.62 L283.83 112.38 L284.42 110.38 L284.56 108.00 L285.11 106.12 L285.29 103.50 L285.89 101.38 L285.99 98.38 L286.60 95.88 L286.73 92.88 L287.31 90.00 L287.38 86.75 L288.04 84.12 L288.12 80.38 L288.78 78.25 L288.86 72.75 L289.50 70.38 L289.57 66.12 L289.97 64.75 L290.62 64.30 L291.62 64.18 L341.88 64.17 L342.88 64.39 L343.40 65.12 L343.45 66.62 L342.80 68.75 L342.70 71.88 L342.14 73.88 L341.92 75.88 L341.65 76.50 L341.25 76.80 L338.88 76.89 L336.12 76.40 L312.00 76.39 L311.00 76.58 L310.34 77.12 L309.76 79.12 L309.46 81.50 L309.47 83.12 L308.98 86.25 L309.09 87.25 L309.62 87.77 L310.62 87.90 L333.62 87.88 L334.75 88.13 L335.04 88.75 L334.84 93.25 L334.67 94.88 L334.17 96.75 L334.13 99.00 L333.75 99.81 L332.75 100.14 L308.88 100.15 L307.50 100.50 L307.05 101.00 L306.82 101.75 L306.75 105.25 L306.12 108.85 L305.96 113.38 L305.40 116.75 L305.30 120.75 L304.78 121.88 L303.75 122.39ZM51.75 241.76 L34.12 241.78 L33.25 241.54 L32.92 241.00 L33.41 238.50 L33.47 236.25 L34.09 234.25 L34.22 231.75 L34.84 230.00 L35.00 227.00 L35.55 225.12 L35.71 222.38 L36.23 220.38 L36.40 217.88 L36.98 215.38 L37.10 211.12 L37.71 208.50 L37.84 203.88 L38.44 201.88 L38.57 196.75 L39.15 194.88 L39.19 192.00 L39.43 191.25 L40.00 190.86 L41.12 190.74 L85.00 190.71 L86.25 190.97 L86.59 191.38 L86.69 192.00 L86.12 194.26 L85.96 198.38 L85.13 200.75 L84.50 201.40 L83.75 201.53 L58.88 201.51 L57.88 201.69 L57.38 202.12 L56.47 207.00 L56.39 210.12 L56.76 211.00 L57.25 211.26 L58.00 211.35 L78.62 211.42 L79.25 211.88 L79.48 212.62 L78.89 215.50 L78.78 218.50 L77.95 221.62 L77.62 222.04 L77.00 222.30 L73.50 221.94 L58.75 221.95 L55.75 221.98 L54.88 222.32 L54.40 223.38 L54.29 227.88 L53.67 229.88 L53.59 234.62 L53.42 236.00 L52.96 237.62 L52.91 240.62 L52.50 241.49 L51.75 241.76ZM162.38 241.76 L145.00 241.78 L143.62 241.46 L142.90 240.50 L141.88 236.13 L138.99 227.75 L138.25 226.94 L136.75 226.67 L117.88 226.69 L116.50 226.92 L115.78 227.62 L107.89 240.88 L107.47 241.38 L106.88 241.68 L87.75 241.78 L86.94 241.62 L86.62 241.12 L86.99 240.25 L93.60 231.50 L97.56 225.62 L100.72 221.50 L112.85 204.38 L119.22 194.62 L120.95 192.12 L121.75 191.27 L122.38 190.88 L123.25 190.73 L143.62 190.72 L145.00 190.97 L145.62 191.71 L154.32 216.50 L163.53 240.12 L163.64 240.75 L163.49 241.25 L163.02 241.62 L162.38 241.76ZM213.00 241.75 L175.12 241.78 L174.38 241.63 L173.95 241.25 L173.75 240.50 L173.78 239.50 L174.26 237.75 L174.52 235.88 L175.08 234.12 L175.17 230.62 L175.87 228.62 L175.99 225.00 L176.60 222.75 L176.67 219.50 L177.29 216.38 L177.34 213.25 L177.94 210.25 L178.06 206.75 L178.71 204.12 L178.78 198.38 L179.43 196.12 L179.51 191.75 L180.00 190.99 L181.25 190.72 L220.00 190.79 L223.50 191.53 L226.25 192.48 L229.25 194.31 L230.71 196.12 L231.78 198.62 L231.98 199.88 L231.93 204.38 L230.82 208.12 L230.02 209.62 L226.54 213.12 L225.25 213.97 L222.38 215.23 L221.95 215.62 L221.83 216.00 L222.14 216.50 L223.88 216.90 L226.50 218.17 L228.75 220.17 L229.82 221.62 L230.50 223.12 L230.74 225.00 L231.24 226.88 L230.68 229.12 L230.43 231.25 L228.84 234.00 L226.78 236.38 L223.88 238.56 L217.75 240.88 L213.00 241.75ZM299.25 241.75 L281.38 241.76 L280.34 241.50 L279.65 240.75 L278.59 236.38 L276.86 231.38 L276.44 229.62 L271.00 215.42 L270.70 213.88 L270.98 213.25 L271.62 213.03 L275.75 213.15 L279.50 212.90 L282.88 211.80 L284.62 210.88 L285.38 210.23 L286.37 208.50 L286.72 207.25 L286.80 205.88 L286.47 204.12 L285.75 203.14 L284.75 202.41 L282.12 201.61 L281.00 201.51 L270.62 201.54 L269.56 201.88 L268.91 202.62 L268.69 203.62 L268.62 206.62 L268.01 208.75 L267.89 211.88 L267.26 214.62 L267.22 217.88 L266.54 221.75 L266.49 225.00 L265.88 227.25 L265.79 231.25 L265.13 233.50 L264.98 239.50 L264.74 240.50 L264.29 241.25 L263.75 241.63 L262.88 241.79 L247.00 241.77 L246.00 241.40 L245.72 240.75 L245.70 239.38 L246.29 237.38 L246.45 235.00 L246.99 233.25 L247.18 231.00 L247.78 228.88 L247.88 226.62 L248.51 224.00 L248.58 221.62 L249.15 219.62 L249.27 216.75 L249.92 214.75 L250.13 209.12 L250.68 207.00 L250.76 202.62 L251.35 199.75 L251.40 195.25 L251.94 192.00 L252.38 191.12 L253.00 190.79 L253.88 190.71 L289.50 190.76 L291.62 191.37 L293.38 191.54 L294.88 192.05 L297.25 192.33 L300.70 193.88 L302.57 195.50 L304.58 198.50 L305.29 200.25 L305.62 203.88 L305.34 207.00 L305.11 207.75 L304.15 209.12 L302.89 211.75 L301.38 213.60 L298.12 216.00 L294.62 217.76 L291.38 218.94 L291.01 219.25 L290.88 219.62 L291.00 220.38 L291.89 222.75 L292.93 224.88 L294.00 227.74 L297.32 234.38 L299.93 240.12 L300.03 241.25 L299.75 241.58 L299.25 241.75ZM335.12 241.77 L317.88 241.78 L317.12 241.62 L316.75 241.12 L316.94 237.62 L317.58 235.25 L317.69 232.75 L318.22 230.38 L318.35 228.00 L318.98 225.50 L319.07 222.88 L319.68 220.62 L319.81 218.12 L320.43 216.25 L320.50 212.38 L321.10 210.00 L321.19 206.38 L321.84 203.50 L321.89 199.12 L322.61 194.75 L322.63 191.88 L322.96 191.12 L323.62 190.78 L341.12 190.73 L342.12 190.91 L342.59 191.50 L342.57 192.12 L342.10 193.75 L341.94 196.38 L341.39 198.62 L341.27 200.88 L340.74 203.12 L340.62 205.62 L339.96 207.88 L339.88 211.38 L339.20 213.38 L339.11 217.50 L338.49 219.88 L338.40 223.38 L337.81 226.00 L337.71 229.38 L337.06 233.12 L336.94 238.00 L336.26 241.00 L335.87 241.50 L335.12 241.77ZM428.00 241.77 L413.88 241.77 L413.00 241.59 L412.59 241.12 L412.55 238.38 L413.17 235.38 L413.24 232.62 L413.90 230.62 L414.03 227.00 L414.68 224.88 L414.74 220.75 L414.94 218.25 L415.38 216.25 L415.41 212.12 L415.85 208.62 L415.62 207.85 L415.25 208.09 L414.12 209.95 L411.70 215.50 L409.92 219.00 L409.43 220.50 L402.53 235.12 L399.75 240.88 L399.12 241.56 L398.00 241.79 L383.88 241.79 L383.00 241.63 L382.55 241.25 L382.15 238.88 L381.70 237.38 L381.58 235.62 L380.98 233.75 L380.76 231.75 L379.56 227.00 L379.35 225.25 L378.81 223.62 L378.68 221.75 L378.10 220.25 L377.92 218.25 L377.34 216.62 L377.19 214.88 L376.67 213.25 L376.48 211.38 L375.75 208.74 L375.38 208.26 L374.75 208.89 L374.39 209.75 L374.33 211.88 L373.77 213.88 L373.63 216.25 L373.03 218.00 L372.89 221.12 L372.33 223.38 L372.14 225.75 L371.61 227.75 L371.51 230.75 L370.89 232.75 L370.77 237.25 L370.25 238.88 L369.86 241.25 L369.38 241.66 L368.62 241.78 L355.88 241.77 L354.62 241.44 L354.27 240.75 L354.29 239.75 L354.86 237.88 L355.07 235.88 L355.61 234.38 L355.82 231.88 L356.31 230.38 L357.03 227.00 L357.20 224.38 L357.77 222.75 L357.96 220.88 L358.55 219.25 L358.75 217.50 L359.23 215.88 L359.37 212.62 L359.97 210.75 L360.14 208.62 L360.67 206.62 L360.86 204.50 L361.41 202.38 L361.52 200.12 L362.07 197.88 L362.19 195.25 L362.78 193.50 L362.91 191.75 L363.12 191.21 L363.62 190.84 L364.50 190.73 L386.62 190.73 L387.25 190.81 L387.75 191.10 L388.13 191.75 L388.65 193.62 L388.96 195.88 L389.48 197.62 L389.60 199.38 L390.09 200.75 L390.31 202.75 L390.91 204.50 L391.05 206.25 L391.62 207.88 L392.29 211.88 L392.98 214.12 L393.19 217.38 L393.73 218.88 L393.94 220.62 L394.38 221.08 L394.82 220.88 L395.25 220.20 L398.20 213.00 L401.42 206.25 L402.12 204.31 L405.80 197.62 L408.46 192.00 L409.12 191.10 L409.75 190.80 L410.62 190.73 L432.62 190.72 L433.76 191.00 L434.17 191.75 L434.11 195.25 L433.47 197.62 L433.36 201.25 L432.72 203.50 L432.33 208.12 L431.85 211.38 L431.84 213.50 L431.29 215.88 L431.03 219.25 L431.13 220.62 L430.56 224.38 L430.50 227.12 L429.90 229.62 L429.78 235.88 L429.14 238.00 L428.98 241.00 L428.62 241.53 L428.00 241.77ZM513.50 241.76 L495.88 241.77 L494.55 241.50 L493.95 240.75 L492.98 236.50 L490.00 227.74 L489.25 226.92 L487.62 226.66 L468.88 226.69 L467.50 226.92 L466.93 227.38 L466.12 228.50 L459.62 239.38 L458.35 241.12 L457.50 241.68 L438.75 241.77 L437.88 241.62 L437.54 241.12 L438.12 239.76 L440.00 237.58 L444.44 231.62 L448.45 225.75 L449.62 224.38 L453.20 219.38 L460.38 208.80 L461.62 207.28 L464.96 202.50 L468.37 197.50 L469.79 195.12 L471.82 192.25 L472.75 191.28 L473.38 190.88 L474.25 190.72 L494.62 190.73 L495.62 190.83 L496.25 191.14 L496.60 191.62 L497.23 193.25 L497.56 194.62 L499.40 199.50 L499.97 201.62 L501.56 205.62 L504.13 213.38 L507.31 221.38 L509.12 226.83 L514.33 240.38 L514.44 241.00 L514.31 241.38 L513.50 241.76ZM543.12 241.77 L525.88 241.77 L525.00 241.56 L524.67 241.12 L524.80 238.38 L525.40 236.12 L525.50 234.00 L526.07 231.75 L526.20 229.62 L526.76 227.88 L526.94 224.75 L527.57 222.88 L527.71 219.88 L528.29 217.88 L528.35 214.62 L528.96 212.38 L529.11 209.38 L529.75 206.50 L529.81 203.88 L530.36 201.75 L530.53 196.75 L531.11 194.38 L531.19 191.88 L531.50 191.14 L532.12 190.80 L549.88 190.73 L550.84 191.00 L551.30 191.62 L551.27 192.25 L550.67 193.75 L550.59 196.75 L549.96 198.75 L549.84 201.62 L549.27 203.75 L549.14 206.12 L548.56 208.38 L548.42 210.75 L547.84 213.12 L547.76 215.75 L547.09 218.12 L546.99 221.00 L546.34 223.12 L546.28 226.50 L545.70 229.00 L545.60 232.88 L544.96 235.38 L544.83 239.25 L544.14 241.12 L543.75 241.54 L543.12 241.77ZM587.38 241.75 L567.12 241.78 L566.38 241.68 L565.76 241.38 L564.98 240.50 L558.92 230.38 L551.88 219.75 L550.80 218.38 L549.12 215.25 L549.20 214.38 L550.38 212.97 L561.88 201.29 L563.46 199.25 L567.50 195.02 L569.88 192.01 L570.66 191.25 L571.38 190.85 L572.25 190.72 L591.12 190.73 L592.00 190.87 L592.36 191.25 L592.17 191.88 L590.50 193.64 L587.29 196.38 L579.20 204.25 L569.50 213.92 L569.07 214.75 L569.24 215.38 L570.50 217.37 L576.22 224.62 L579.48 229.25 L581.31 231.38 L587.64 239.88 L588.10 240.75 L588.15 241.25 L587.88 241.60 L587.38 241.75ZM205.43 211.25 L208.84 210.62 L211.12 209.48 L212.11 208.62 L212.95 207.12 L213.26 206.00 L213.17 203.88 L212.62 202.75 L211.38 201.66 L209.25 200.82 L198.25 200.77 L197.25 201.03 L196.81 201.75 L196.71 203.62 L196.10 206.25 L195.90 210.25 L196.12 210.97 L196.61 211.25 L197.25 211.34 L205.43 211.25ZM134.39 215.88 L135.12 215.80 L135.62 215.53 L135.79 215.12 L135.72 214.50 L135.01 212.50 L134.67 210.75 L133.58 207.88 L133.32 206.38 L132.67 204.38 L131.91 202.88 L131.38 202.64 L130.50 203.50 L128.83 206.38 L124.18 213.50 L123.59 214.62 L123.46 215.25 L123.75 215.69 L124.50 215.88 L134.39 215.88ZM481.83 215.88 L485.75 215.82 L486.38 215.59 L486.67 215.00 L484.30 206.38 L483.19 203.38 L482.88 202.84 L482.50 202.63 L482.00 202.89 L481.33 203.75 L479.88 206.30 L475.09 213.62 L474.39 215.12 L474.58 215.62 L475.25 215.87 L481.83 215.88ZM206.72 231.62 L209.58 230.62 L211.16 229.62 L211.68 229.00 L212.46 226.88 L212.57 225.12 L212.22 224.00 L211.25 222.84 L210.27 222.12 L209.38 221.76 L207.00 221.59 L205.00 221.10 L196.00 221.07 L195.38 221.20 L195.00 221.47 L193.94 224.62 L193.82 228.00 L193.18 230.38 L193.25 230.93 L193.54 231.38 L194.75 231.72 L206.72 231.62Z"/></symbol>
+  </defs>
+</svg>
+
+<!-- ================= 1. CABEÇALHO ================= -->
+<header class="hdr" id="topo">
+  <div class="wrap hdr-in">
+    <!-- Logo oficial Fabrimak (vetorizada) -->
+    <a class="logo" href="#inicio" aria-label="Fabrimak, voltar ao início">
+      <svg class="logo-mark" aria-hidden="true"><use href="#i-logo"/></svg>
+    </a>
+    <!-- Página sem menu: quando existirem as páginas Início e Máquinas, o menu pode ser adicionado aqui -->
+    <a class="btn btn-wa btn-hdr" href="#orcamento">Solicitar orçamento</a>
+  </div>
+</header>
+
+<main id="conteudo">
+
+<!-- ================= 2. PRIMEIRA DOBRA (vídeo real, scroll-scrub) ================= -->
+<section class="hero" id="inicio" aria-label="Apresentação">
+  <div class="stage" id="stage">
+    <div class="stage-bg" aria-hidden="true"><canvas id="bgcv" width="36" height="64"></canvas></div>
+    <div class="slab a" aria-hidden="true"></div>
+    <div class="slab b" aria-hidden="true"></div>
+    <div class="side-txt" aria-hidden="true">Fabrimak // Fabricação sob projeto</div>
+
+    <div class="stage-grid">
+      <div class="chapters" id="chapters">
+        <div class="ch on" data-i="0">
+          <p class="tag"><b>//</b> Corte e dobra · Corte a laser · Soldagem</p>
+          <h1><span class="slash">//</span>Precisão e eficiência para os seus <em>projetos industriais.</em></h1>
+          <p class="lead">Corte e dobra de chapas metálicas, corte a laser e soldagem para empresas que precisam transformar projetos em peças, com qualidade e confiança.</p>
+          <div class="btn-row">
+            <a class="btn btn-wa" data-wa="hero" href="#"><svg aria-hidden="true"><use href="#i-wa"/></svg>Solicitar orçamento</a>
+            <a class="btn btn-ghost" href="#corte-e-dobra">Conheça nossos serviços</a>
+          </div>
+        </div>
+        <div class="ch future" data-i="1" aria-hidden="true">
+          <p class="tag"><b>// 02</b> A dobra</p>
+          <h2><span class="slash">//</span>A chapa ganha forma.</h2>
+          <dl class="specs">
+            <div><dt>Processo</dt><dd>Dobra de chapas metálicas</dd></div>
+            <div><dt>Referência</dt><dd>Desenho técnico e medidas do cliente</dd></div>
+            <div><dt>Etapa anterior</dt><dd>Corte de chapas ou corte a laser</dd></div>
+          </dl>
+        </div>
+        <div class="ch future" data-i="2" aria-hidden="true">
+          <p class="tag"><b>// 03</b> O projeto</p>
+          <h2><span class="slash">//</span>Do desenho à peça.</h2>
+          <dl class="specs">
+            <div><dt>Conferência</dt><dd>Informações revisadas antes da produção</dd></div>
+            <div><dt>Alinhamento</dt><dd>Prazos e condições combinados com você</dd></div>
+            <div><dt>Integração</dt><dd>Corte, dobra e soldagem com um só fornecedor</dd></div>
+          </dl>
+        </div>
+      </div>
+
+      <div class="frame" id="frame">
+        <img class="poster" src="media/poster.jpg" alt="Operador posiciona chapa metálica na dobradeira da Fabrimak" width="480" height="854" fetchpriority="high">
+        <video id="hv" muted playsinline loop preload="auto" poster="media/poster.jpg" aria-label="Vídeo real: chapa sendo dobrada na dobradeira da Fabrimak" disablepictureinpicture>
+          <source src="media/hero-dobra.mp4" type="video/mp4">
+        </video>
+        <span class="brk tl"></span><span class="brk tr"></span><span class="brk bl"></span><span class="brk br"></span>
+        <div class="real-badge" aria-hidden="true">Registro real · Fabrimak</div>
+      </div>
+    </div>
+
+    <div class="progress" aria-hidden="true">
+      <span id="pNum">01</span><span class="bar"><i id="pBar"></i></span><span class="scroll-hint">Role</span>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 3. A FABRIMAK ================= -->
+<section class="band on-light" id="a-fabrimak">
+  <div class="deco-slab" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="about">
+      <div>
+        <p class="tag"><b>//</b> A Fabrimak</p>
+        <h2 class="h2" style="margin-top:18px">Seu projeto industrial merece um parceiro preparado.</h2>
+      </div>
+      <div class="about-txt">
+        <p>A Fabrimak trabalha com <strong>transformação de chapas metálicas</strong>: corte, dobra, corte a laser e soldagem para empresas que precisam fabricar peças conforme o próprio projeto.</p>
+        <p>Antes de produzir, conferimos as informações recebidas, esclarecemos dúvidas e alinhamos as etapas com você. Assim, a peça que sai da nossa produção corresponde ao que foi combinado.</p>
+      </div>
+    </div>
+    <div class="pillars">
+      <div class="pillar"><p class="tag">Entender</p><h3>Especificações claras</h3><p>Medidas, desenhos e requisitos verificados antes do início.</p></div>
+      <div class="pillar"><p class="tag">Alinhar</p><h3>Etapas combinadas</h3><p>Serviços, prazos e condições definidos com o cliente.</p></div>
+      <div class="pillar"><p class="tag">Fabricar</p><h3>Processos integrados</h3><p>Corte, dobra e soldagem dentro do mesmo fluxo.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 4. CORTE E DOBRA ================= -->
+<section class="band svc-cd" id="corte-e-dobra">
+  <div class="wrap">
+    <div class="cd-grid">
+      <div class="cd-media">
+        <figure>
+          <video class="lazy-loop" muted playsinline loop preload="none" poster="media/cd-dobradeira.jpg" aria-label="Vídeo real: operador dobrando chapa longa na dobradeira da Fabrimak" width="432" height="768"><source data-src="media/cd-dobradeira.mp4" type="video/mp4"></video>
+          <span class="brk tl"></span>
+          <figcaption>Registro real · Dobradeira</figcaption>
+        </figure>
+        <figure>
+          <video class="lazy-loop" muted playsinline loop preload="none" poster="media/cd-peca.jpg" aria-label="Vídeo real: peça metálica cortada e dobrada sendo conferida" width="432" height="768"><source data-src="media/cd-peca.mp4" type="video/mp4"></video>
+          <span class="brk br"></span>
+          <figcaption>Registro real · Peça pronta</figcaption>
+        </figure>
+      </div>
+      <div class="svc-copy">
+        <p class="tag"><b>//</b> Serviço · Corte e dobra</p>
+        <h2 class="h2">Corte e dobra de chapas metálicas para o seu projeto.</h2>
+        <p class="lead">Transformamos chapas metálicas em peças conforme as especificações do seu projeto, com as etapas de corte e dobra integradas ao processo de fabricação.</p>
+        <div class="lists">
+          <div>
+            <h3>O que fazemos</h3>
+            <ul class="check">
+              <li>Corte de chapas</li>
+              <li>Dobra de chapas metálicas</li>
+              <li>Fabricação de peças conforme projeto</li>
+              <li>Soldagem e união de componentes, quando aplicável</li>
+              <li>Demandas industriais sob medida</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Para a sua operação</h3>
+            <ul class="check">
+              <li>Peças conforme as especificações acordadas</li>
+              <li>Mais organização entre as etapas</li>
+              <li>Serviços concentrados em um fornecedor</li>
+              <li>Menos prestadores para coordenar</li>
+              <li>Características da peça alinhadas antes da fabricação</li>
+            </ul>
+          </div>
+        </div>
+        <div class="btn-row" style="margin-top:8px">
+          <a class="btn btn-wa" data-wa="corte_dobra" href="#"><svg aria-hidden="true"><use href="#i-wa"/></svg>Orçar corte e dobra</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 5. CORTE A LASER ================= -->
+<section class="band on-light-2" id="corte-a-laser">
+  <div class="wrap">
+    <div class="laser-band">
+      <div class="laser-media">
+        <video class="lazy-loop" muted playsinline loop preload="none" poster="media/laser-band.jpg" aria-label="Vídeo real: corte a laser em chapa metálica na Fabrimak" width="960" height="600"><source data-src="media/laser-band.mp4" type="video/mp4"></video>
+        <span class="cap" style="left:auto;right:0;top:0;bottom:auto">Registro real · Corte a laser</span>
+      </div>
+      <div class="laser-title">
+        <p class="tag"><b>//</b> Serviço · Corte a laser</p>
+        <h2 class="h2" style="margin-top:14px">Corte a laser para peças que exigem precisão.</h2>
+      </div>
+    </div>
+
+    <div class="laser-grid">
+      <div class="svc-copy">
+        <p class="lead">Corte a laser de chapas metálicas para fabricar peças conforme desenhos técnicos, geometrias e especificações de cada projeto.</p>
+        <p class="lead">Para empresas que precisam de peças específicas para máquinas, equipamentos, estruturas e outros projetos industriais, o corte a laser permite reproduzir contornos definidos no desenho e preparar a peça para as etapas seguintes.</p>
+        <div class="btn-row" style="margin-top:8px">
+          <a class="btn btn-navy" data-wa="corte_laser" href="#"><svg aria-hidden="true"><use href="#i-wa"/></svg>Orçar corte a laser</a>
+        </div>
+      </div>
+      <div class="tiles">
+        <div class="tile"><p class="tag">Geometria</p><h3>Contornos e formas específicas</h3><p>Recortes conforme a geometria definida no projeto.</p></div>
+        <div class="tile"><p class="tag">Desenho técnico</p><h3>Fabricação conforme desenho</h3><p>Peças produzidas a partir das informações enviadas.</p></div>
+        <div class="tile"><p class="tag">Dimensional</p><h3>Precisão dimensional</h3><p>Atenção às medidas especificadas para a peça.</p></div>
+        <div class="tile"><p class="tag">Aplicação</p><h3>Componentes industriais</h3><p>Peças para máquinas, equipamentos e estruturas.</p></div>
+        <div class="tile wide"><p class="tag">Integração</p><h3>Do corte à dobra e à soldagem</h3><p>Quando o projeto pede, a peça cortada segue para dobra e soldagem com o mesmo fornecedor.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 6. POR QUE A FABRIMAK ================= -->
+<section class="band" id="diferenciais">
+  <div class="wrap on-dark-txt">
+    <div class="sec-head">
+      <p class="tag"><b>//</b> Por que a Fabrimak</p>
+      <h2 class="h2">Mais confiança em cada etapa do seu projeto.</h2>
+      <p>Entender corretamente o projeto e alinhar as expectativas antes de produzir evita falhas de comunicação, retrabalho e problemas no planejamento da sua produção.</p>
+    </div>
+    <div class="why-grid">
+      <!-- VALIDAR: confirmar que a conferência de projeto faz parte da operação da Fabrimak -->
+      <div class="why feature">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.6" d="M9 3h6l1 2h3v16H5V5h3l1-2Zm-1 10 3 3 5-6"/></svg>
+        <h3>Conferência do projeto antes da produção</h3>
+        <p>As informações e especificações recebidas são conferidas pela equipe. Dúvidas sobre medidas, desenhos ou requisitos são esclarecidas com você antes do início da fabricação.</p>
+      </div>
+      <div class="why"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.6" d="M4 5h16v11H9l-5 4z"/></svg><h3>Comunicação clara</h3><p>Atendimento direto durante a avaliação e a produção.</p></div>
+      <div class="why"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="1.6"/><path fill="none" stroke="currentColor" stroke-width="1.6" d="M12 7v5l3 2"/></svg><h3>Prazos alinhados</h3><p>Prazos e condições combinados antes da produção.</p></div>
+      <div class="why"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.6" d="M3 7h6v10H3zM15 7h6v10h-6zM9 12h6"/></svg><h3>Etapas com um fornecedor</h3><p>Corte, dobra e soldagem sem coordenar vários prestadores.</p></div>
+      <div class="why"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.6" d="m12 3 8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z"/></svg><h3>Atenção à qualidade</h3><p>Cuidado com cada peça produzida.</p></div>
+      <div class="why"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path fill="none" stroke="currentColor" stroke-width="1.6" d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6M16 4.5a3.5 3.5 0 0 1 0 7M18 14c2 .7 3 2.8 3 6"/></svg><h3>Atendimento próximo</h3><p>Para entender a fundo a necessidade do cliente.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 7. PROJETOS / GALERIA ================= -->
+<section class="band on-navy" id="projetos">
+  <div class="wrap">
+    <div class="gal-top">
+      <div class="sec-head">
+        <p class="tag"><b>//</b> Projetos e aplicações</p>
+        <h2 class="h2">Da chapa à peça, na nossa produção.</h2>
+      </div>
+      <div class="gal-nav">
+        <button type="button" id="galPrev" aria-label="Imagens anteriores"><svg><use href="#i-arrow-l"/></svg></button>
+        <button type="button" id="galNext" aria-label="Próximas imagens"><svg><use href="#i-arrow"/></svg></button>
+      </div>
+    </div>
+    <!-- Galeria: cards "Espaço reservado" devem ser substituídos por fotos/vídeos reais da Fabrimak -->
+    <div class="gallery" id="gallery" tabindex="0" aria-label="Galeria de projetos (role horizontalmente)">
+      <figure class="gcard"><div class="m"><span class="num">01</span><img src="media/peca-dobrada.webp" alt="Peça em chapa grossa dobrada em curvas, com furos cortados, sobre palete em frente à dobradeira" loading="lazy" decoding="async" width="900" height="900"></div><figcaption><b>Peça dobrada em raio</b><span class="real">Registro real</span></figcaption></figure>
+      <figure class="gcard"><div class="m"><span class="num">02</span><img src="media/chapa-perfurada.webp" alt="Chapa perfurada curvada em formato semicilíndrico sobre bancada" loading="lazy" decoding="async" width="720" height="955"></div><figcaption><b>Chapa perfurada curvada</b><span class="real">Registro real</span></figcaption></figure>
+      <figure class="gcard"><div class="m"><span class="num">03</span><img src="media/laser-still.webp" alt="Cabeçote de corte a laser sobre chapa com recortes" loading="lazy" decoding="async" width="540" height="960"></div><figcaption><b>Corte a laser</b><span class="real">Registro real</span></figcaption></figure>
+      <figure class="gcard"><div class="m"><span class="num">04</span><img src="media/cd-dobradeira.webp" alt="Operador dobrando chapa longa na dobradeira" loading="lazy" decoding="async" width="540" height="960"></div><figcaption><b>Dobra de chapas longas</b><span class="real">Registro real</span></figcaption></figure>
+      <figure class="gcard"><div class="m"><span class="num">05</span><img src="media/peca-final.webp" alt="Peça metálica cortada com recortes sendo apresentada após a fabricação" loading="lazy" decoding="async" width="540" height="960"></div><figcaption><b>Peça cortada e dobrada</b><span class="real">Registro real</span></figcaption></figure>
+      <figure class="gcard"><div class="m"><span class="num">06</span><img src="media/detail.webp" alt="Detalhe da ferramenta da dobradeira pressionando a chapa" loading="lazy" decoding="async" width="600" height="600"></div><figcaption><b>Detalhe da dobra</b><span class="real">Registro real</span></figcaption></figure>
+      <figure class="gcard"><div class="m ph" role="img" aria-label="Espaço reservado"><span class="num">07</span><div class="ph-label"><svg><use href="#i-cam"/></svg><strong>Espaço reservado</strong>Componentes soldados</div></div><figcaption><b>Soldagem</b><span>Aguardando foto real</span></figcaption></figure>
+    </div>
+
+    <div class="talk">
+      <p>Quer saber se o seu projeto se encaixa no nosso processo?<span>Fale com a equipe e tire suas dúvidas antes de enviar os arquivos.</span></p>
+      <a class="btn btn-wa" data-wa="diferenciais_projetos" href="#"><svg aria-hidden="true"><use href="#i-wa"/></svg>Conversar com a equipe</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 8. SEGMENTOS ================= -->
+<!-- VALIDAR com a Fabrimak quais segmentos são efetivamente atendidos -->
+<section class="band on-light" id="segmentos">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="tag"><b>//</b> Segmentos e aplicações</p>
+      <h2 class="h2">Para empresas que precisam de peças metálicas sob projeto.</h2>
+      <p>Veja alguns segmentos que podem se beneficiar de corte, dobra, corte a laser e soldagem de chapas.</p>
+    </div>
+    <div class="seg-grid">
+      <div class="seg"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="1.6"/><path fill="none" stroke="currentColor" stroke-width="1.6" d="M12 2v3m0 14v3M2 12h3m14 0h3M4.9 4.9 7 7m10 10 2.1 2.1M4.9 19.1 7 17M17 7l2.1-2.1"/></svg><div><h3>Máquinas e equipamentos</h3><p>Peças e componentes para fabricantes.</p></div></div>
+      <div class="seg"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.6" d="M3 21V10l5 3V10l5 3V6l8 4v11z"/></svg><div><h3>Indústrias metalúrgicas</h3><p>Etapas de transformação de chapas.</p></div></div>
+      <div class="seg"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="7" cy="17" r="3" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="18" cy="18" r="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path fill="none" stroke="currentColor" stroke-width="1.6" d="M4 14V8h7l2 6h5l2 4M8 8V5"/></svg><div><h3>Implementos agrícolas</h3><p>Peças para fabricação de implementos.</p></div></div>
+      <div class="seg"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.6" d="M3 21h18M5 21V5h14v16M5 9h14M5 13h14M5 17h14M9 5v16M15 5v16"/></svg><div><h3>Estruturas metálicas</h3><p>Componentes para projetos estruturais.</p></div></div>
+      <div class="seg"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6"/><path fill="none" stroke="currentColor" stroke-width="1.6" d="M9 9h6v6H9z"/></svg><div><h3>Equipamentos e componentes</h3><p>Peças sob medida para produtos industriais.</p></div></div>
+      <div class="seg"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.6" d="M14.7 6.3a4 4 0 0 0-5.4 5.2L3 17.8 6.2 21l6.3-6.3a4 4 0 0 0 5.2-5.4l-2.4 2.4-2.6-.6-.6-2.6z"/></svg><div><h3>Manutenção industrial</h3><p>Peças para reposição e adequações.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 9. COMO FUNCIONA ================= -->
+<section class="band on-light-2" id="como-funciona">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="tag"><b>//</b> Como solicitar um orçamento</p>
+      <h2 class="h2">Quatro passos do primeiro contato ao planejamento.</h2>
+    </div>
+    <ol class="steps">
+      <li class="step"><h3>Entre em contato</h3><p>Conte qual serviço você precisa e qual é a sua necessidade.</p></li>
+      <li class="step"><h3>Envie as informações do projeto</h3><p>Compartilhe desenhos técnicos, medidas, arquivos e outras informações para a avaliação.</p></li>
+      <li class="step"><h3>Conferência e alinhamento</h3><p>A equipe verifica as informações e esclarece eventuais dúvidas técnicas.</p></li>
+      <li class="step"><h3>Orçamento e planejamento</h3><p>Condições, serviços necessários e prazos são alinhados com você.</p></li>
+    </ol>
+    <div class="steps-cta">
+      <a class="link-arrow" href="#orcamento">Começar pelo passo 1 <svg width="18" height="18" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      <p>Preencha o formulário abaixo e continue a conversa pelo WhatsApp.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 10. FAQ ================= -->
+<section class="band on-light" id="faq">
+  <div class="wrap faq-grid">
+    <div class="sec-head" style="margin-bottom:0">
+      <p class="tag"><b>//</b> Perguntas frequentes</p>
+      <h2 class="h2">Dúvidas comuns antes de orçar.</h2>
+      <p>Não encontrou sua resposta? Fale com a equipe pelo botão do WhatsApp.</p>
+    </div>
+    <div class="faq">
+      <details><summary>Quais serviços a Fabrimak oferece?</summary><div class="ans"><p>Corte e dobra de chapas metálicas, corte a laser e soldagem, com fabricação de peças conforme o projeto do cliente.</p></div></details>
+      <details><summary>Como solicitar um orçamento?</summary><div class="ans"><p>Pelo WhatsApp, em qualquer botão de orçamento da página, ou pelo formulário no fim da página. Informe o serviço e descreva o seu projeto.</p></div></details>
+      <details><summary>Posso enviar um desenho técnico para avaliação?</summary><div class="ans"><p>Sim. Você pode compartilhar o desenho técnico e os arquivos do projeto na conversa pelo WhatsApp para que a equipe avalie.</p></div></details>
+      <details><summary>Quais informações preciso fornecer para cotar uma peça?</summary><div class="ans"><p>Quanto mais completo, melhor: desenho técnico ou arquivo do projeto, medidas, material, espessura, quantidade e os serviços necessários (corte, dobra, laser, soldagem).</p></div></details>
+      <details><summary>A Fabrimak realiza corte a laser, dobra e soldagem?</summary><div class="ans"><p>Sim. Os serviços podem ser contratados separadamente ou combinados, conforme a necessidade do projeto.</p></div></details>
+      <!-- EDITAR: substituir pela lista real de materiais e espessuras após confirmação técnica -->
+      <details><summary>Quais materiais e espessuras podem ser trabalhados?</summary><div class="ans"><p>Os materiais e as espessuras dependem de cada serviço e são confirmados pela equipe durante o atendimento. Informe essas características ao solicitar o orçamento.</p></div></details>
+      <details><summary>Como são definidos os prazos de produção e entrega?</summary><div class="ans"><p>Os prazos dependem do projeto, da quantidade e dos serviços envolvidos. Eles são alinhados com você antes do início da produção.</p></div></details>
+      <details><summary>A empresa atende projetos sob medida?</summary><div class="ans"><p>Sim. As peças são fabricadas conforme as especificações de cada projeto.</p></div></details>
+      <details><summary>Como entrar em contato com a equipe?</summary><div class="ans"><p>Pelo WhatsApp, usando o botão fixo no canto da tela ou os botões de orçamento ao longo da página.</p></div></details>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 11. CHAMADA FINAL + FORMULÁRIO ================= -->
+<section class="band final" id="orcamento">
+  <div class="wrap final-grid" id="contato">
+    <div>
+      <p class="tag"><b>//</b> Orçamento</p>
+      <h2 style="margin-top:18px">Tem um projeto em andamento? <span class="slash" style="margin:0">Vamos conversar.</span></h2>
+      <p class="lead">Envie as informações do seu projeto e converse com a equipe da Fabrimak para avaliar a melhor forma de atender à sua necessidade.</p>
+      <ul class="check final-points">
+        <li>Preencha o que tiver em mãos</li>
+        <li>A mensagem chega organizada no WhatsApp</li>
+        <li>Anexe desenhos e arquivos na própria conversa</li>
+      </ul>
+    </div>
+
+    <form class="quote" id="quote" novalidate aria-describedby="formHelp">
+      <p id="formHelp" class="sr-only">Campos com asterisco são obrigatórios. Ao enviar, o WhatsApp abre com a mensagem preenchida.</p>
+      <div class="row">
+        <div class="fld"><label for="f-nome">Nome *</label><input id="f-nome" name="nome" autocomplete="name" required><span class="err" id="e-nome"></span></div>
+        <div class="fld"><label for="f-empresa">Empresa <span class="opt">(opcional)</span></label><input id="f-empresa" name="empresa" autocomplete="organization"></div>
+      </div>
+      <div class="row">
+        <div class="fld"><label for="f-tel">Telefone / WhatsApp <span class="opt">(opcional)</span></label><input id="f-tel" name="telefone" type="tel" inputmode="tel" autocomplete="tel" placeholder="(00) 00000-0000"><span class="err" id="e-tel"></span></div>
+        <div class="fld"><label for="f-servico">Serviço *</label>
+          <select id="f-servico" name="servico" required>
+            <option value="">Selecione</option>
+            <option>Corte e Dobra</option>
+            <option>Corte a Laser</option>
+            <option>Soldagem</option>
+            <option>Outro</option>
+          </select><span class="err" id="e-servico"></span></div>
+      </div>
+      <div class="fld"><label for="f-desc">Descrição do projeto <span class="opt">(opcional)</span></label><textarea id="f-desc" name="descricao" maxlength="1200" placeholder="Material, espessura, quantidade, medidas principais…"></textarea></div>
+      <div class="fld"><label for="f-arq">Desenho técnico ou arquivo <span class="opt">(opcional)</span></label><input id="f-arq" name="arquivo" type="file" accept=".pdf,.dwg,.dxf,.step,.stp,.png,.jpg,.jpeg"><p class="file-note" id="fileNote" hidden>O arquivo não é enviado automaticamente. Anexe <b id="fileName"></b> na conversa do WhatsApp.</p></div>
+      <a class="btn btn-wa" id="waFinal" data-wa="chamada_final" href="#" role="button"><svg aria-hidden="true"><use href="#i-wa"/></svg>Solicitar orçamento pelo WhatsApp</a>
+      <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+      <p class="privacy">Os dados preenchidos são usados apenas para montar a mensagem do seu orçamento.</p>
+    </form>
+  </div>
+</section>
+</main>
+
+<!-- ================= 12. RODAPÉ ================= -->
+<footer>
+  <div class="wrap">
+    <div class="ft">
+      <div class="about-ft">
+        <a class="logo" href="#inicio" aria-label="Fabrimak, voltar ao início">
+          <svg class="logo-mark" aria-hidden="true"><use href="#i-logo"/></svg>
+        </a>
+        <p>Corte e dobra de chapas metálicas, corte a laser e soldagem para empresas e indústrias.</p>
+      </div>
+      <div>
+        <h3>Serviços</h3>
+        <ul><li><a href="#corte-e-dobra">Corte e Dobra</a></li><li><a href="#corte-a-laser">Corte a Laser</a></li><li><a href="#corte-e-dobra">Soldagem</a></li><li><a href="#orcamento">Solicitar orçamento</a></li></ul>
+      </div>
+      <div>
+        <h3>Contato</h3>
+        <!-- PREENCHER com dados reais: telefone, WhatsApp, e-mail, redes sociais. Localização: -28.2882214, -49.1359825 -->
+        <ul>
+          <li class="pending">Telefone / WhatsApp: a definir</li>
+          <li class="pending">E-mail comercial: a definir</li>
+          <li class="map-li">
+            <div class="map-box">
+              <a class="map-fallback" href="https://maps.app.goo.gl/qcZ1Wbti9n8QG7nj7" target="_blank" rel="noopener"><svg aria-hidden="true" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a7.5 7.5 0 0 0-7.5 7.5C4.5 15.3 12 22 12 22s7.5-6.7 7.5-12.5A7.5 7.5 0 0 0 12 2Zm0 10.2a2.7 2.7 0 1 1 0-5.4 2.7 2.7 0 0 1 0 5.4Z"/></svg><b>Fabrimak no Google Maps</b><span>28°17'17.6"S · 49°08'09.5"W</span></a>
+              <iframe hidden title="Localização da Fabrimak no Google Maps" data-src="https://maps.google.com/maps?q=-28.2882214,-49.1359825&amp;t=m&amp;z=16&amp;ie=UTF8&amp;iwloc=&amp;hl=pt-BR&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+            </div>
+            <a class="map-link" href="https://maps.app.goo.gl/qcZ1Wbti9n8QG7nj7" target="_blank" rel="noopener"><svg aria-hidden="true" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/></svg><span>Abrir no Google Maps</span></a>
+          </li>
+          <li class="pending">Redes sociais: a definir</li>
+        </ul>
+      </div>
+    </div>
+    <div class="legal">
+      <span>© <span id="yr">2026</span> Fabrimak. Todos os direitos reservados.</span>
+      <span><!-- link da Política de Privacidade, quando implementada --></span>
+    </div>
+  </div>
+</footer>
+
+<!-- 6. WhatsApp flutuante -->
+<a class="wa-float" data-wa="flutuante" href="#" aria-label="Falar com a Fabrimak pelo WhatsApp"><svg aria-hidden="true"><use href="#i-wa"/></svg><span>WhatsApp</span></a>
+
+<script>
+(function(){
+  "use strict";
+  /* ========== CONFIG ========== */
+  var WHATSAPP_NUMBER = "SEU_LINK_DO_WHATSAPP";   // ex.: 5511999999999 (somente dígitos)
+  var FORM_ENDPOINT = "";                          // opcional: URL que recebe o formulário (POST JSON). Vazio = sem integração.
+
+  var MSG = {
+    hero: "Olá! Gostaria de solicitar um orçamento com a Fabrimak.",
+    corte_dobra: "Olá! Tenho interesse nos serviços de corte e dobra da Fabrimak. Gostaria de avaliar um projeto.",
+    corte_laser: "Olá! Gostaria de solicitar um orçamento de corte a laser para um projeto.",
+    diferenciais_projetos: "Olá! Gostaria de conversar com a equipe da Fabrimak sobre um projeto.",
+    chamada_final: "Olá! Gostaria de solicitar um orçamento com a Fabrimak.",
+    flutuante: "Olá! Gostaria de solicitar um orçamento com a Fabrimak."
+  };
+  function waUrl(text){ return "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(text); }
+
+  /* ========== TRACKING (GTM / Google Ads / Meta Pixel) ========== */
+  window.dataLayer = window.dataLayer || [];
+  function track(event, params){
+    params = params || {};
+    try{ window.dataLayer.push(Object.assign({event:event}, params)); }catch(e){}
+    try{ if(typeof window.gtag === "function") window.gtag("event", event, params); }catch(e){}
+    try{ if(typeof window.fbq === "function"){
+      if(event === "whatsapp_click") window.fbq("track","Contact",{content_name:params.cta_location});
+      else window.fbq("trackCustom", event, params);
+    } }catch(e){}
+  }
+
+  /* ========== WHATSAPP: exatamente 6 pontos ========== */
+  var waLinks = document.querySelectorAll("[data-wa]");
+  waLinks.forEach(function(a){
+    var k = a.getAttribute("data-wa");
+    a.href = waUrl(MSG[k] || MSG.hero);
+    a.target = "_blank"; a.rel = "noopener";
+    if(k === "chamada_final") return; // tratado pelo formulário
+    a.addEventListener("click", function(){ track("whatsapp_click", {cta_location:k}); });
+  });
+
+  /* ========== HEADER / MENU ========== */
+  var hdr = document.querySelector(".hdr");
+
+  /* ========== HERO: scroll-scrub do vídeo real ========== */
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var hero = document.getElementById("inicio"), v = document.getElementById("hv");
+  var chs = Array.prototype.slice.call(document.querySelectorAll(".ch"));
+  var tc = document.getElementById("tc") || {}, pBar = document.getElementById("pBar"), pNum = document.getElementById("pNum"), secLbl = document.getElementById("secLbl") || {}, scrubLbl = document.getElementById("scrubLbl") || {};
+  var cv = document.getElementById("bgcv"), cx = cv.getContext && cv.getContext("2d");
+  var dur = 7.3, ready = false, target = 0, cur = 0, active = -1, videoOk = true;
+  var mobile = window.matchMedia("(max-width:900px)");
+
+  if(reduce){ document.documentElement.classList.add("static-hero"); }
+
+  v.addEventListener("loadedmetadata", function(){ dur = v.duration || dur; ready = true; });
+  v.addEventListener("error", function(){ videoOk = false; v.hidden = true; }, true);
+  // fallback se o vídeo não carregar: pôster permanece visível
+  var src = v.querySelector("source"); if(src) src.addEventListener("error", function(){ videoOk = false; v.hidden = true; });
+
+  function setChapter(i){
+    if(i === active) return; active = i;
+    chs.forEach(function(c, j){
+      c.classList.toggle("on", j === i);
+      c.classList.toggle("past", j < i);
+      c.classList.toggle("future", j > i);
+      c.setAttribute("aria-hidden", j === i ? "false" : "true");
+      c.querySelectorAll("a,button").forEach(function(el){ el.tabIndex = j === i ? 0 : -1; });
+    });
+    var n = "0" + (i + 1);
+    pNum.textContent = n; secLbl.textContent = "Seção " + n + "/03";
+  }
+  function fmtTC(t){ var s = Math.floor(t), f = Math.floor((t - s) * 30); return "00:00:" + (s < 10 ? "0" : "") + s + ":" + (f < 10 ? "0" : "") + f; }
+
+  var autoplaying = false;
+  function heroProgress(){
+    var r = hero.getBoundingClientRect(), total = hero.offsetHeight - window.innerHeight;
+    return total > 0 ? Math.min(1, Math.max(0, -r.top / total)) : 0;
+  }
+  function onScroll(){
+    hdr.classList.toggle("solid", window.scrollY > 40);
+    if(reduce) return;
+    var p = heroProgress();
+    setChapter(p < .3 ? 0 : p < .64 ? 1 : 2);
+    pBar.style.transform = "scaleX(" + p + ")";
+    // topo: vídeo em loop automático; ao rolar: scrub pelo scroll
+    if(p < .03){
+      if(!autoplaying && videoOk){ autoplaying = true; scrubLbl.textContent = "Loop"; var pr = v.play(); if(pr && pr.catch) pr.catch(function(){ autoplaying = false; }); }
+    } else {
+      if(autoplaying){ autoplaying = false; v.pause(); cur = v.currentTime; }
+      scrubLbl.textContent = "Scrub ativo";
+      target = Math.min(dur - 0.05, ((p - .03) / .97) * dur);
+    }
+  }
+  function loop(){
+    if(!reduce && ready && !autoplaying && videoOk){
+      cur += (target - cur) * 0.18;
+      if(Math.abs(target - cur) > 0.01 && !v.seeking){ try{ v.currentTime = cur; }catch(e){} }
+    }
+    tc.textContent = fmtTC(v.currentTime || 0);
+    if(cx && !mobile.matches && videoOk && v.readyState >= 2 && heroVisible){ try{ cx.drawImage(v, 0, 0, cv.width, cv.height); }catch(e){} }
+    requestAnimationFrame(loop);
+  }
+  var heroVisible = true;
+  if("IntersectionObserver" in window){
+    new IntersectionObserver(function(es){ heroVisible = es[0].isIntersecting; if(!heroVisible && autoplaying){ v.pause(); autoplaying = false; } }, {threshold:0}).observe(hero);
+  }
+  if(reduce){ setChapter(0); v.removeAttribute("loop"); } else { onScroll(); requestAnimationFrame(loop); }
+  window.addEventListener("scroll", onScroll, {passive:true});
+  window.addEventListener("resize", onScroll);
+
+  /* ========== VÍDEOS DAS SEÇÕES: carregam e tocam só quando visíveis ========== */
+  document.querySelectorAll("video.lazy-loop").forEach(function(vid){
+    function load(){ var s = vid.querySelector("source[data-src]"); if(s){ s.src = s.getAttribute("data-src"); s.removeAttribute("data-src"); vid.load(); } }
+    if(reduce || !("IntersectionObserver" in window)){ return; }
+    new IntersectionObserver(function(es){
+      if(es[0].isIntersecting){ load(); var pr = vid.play(); if(pr && pr.catch) pr.catch(function(){}); }
+      else vid.pause();
+    }, {rootMargin:"200px 0px"}).observe(vid);
+  });
+
+  /* ========== GALERIA ========== */
+  var gal = document.getElementById("gallery");
+  function step(){ var c = gal.querySelector(".gcard"); return c ? c.getBoundingClientRect().width + 16 : 300; }
+  document.getElementById("galPrev").addEventListener("click", function(){ gal.scrollBy({left:-step(), behavior: reduce ? "auto" : "smooth"}); });
+  document.getElementById("galNext").addEventListener("click", function(){ gal.scrollBy({left:step(), behavior: reduce ? "auto" : "smooth"}); });
+
+  /* ========== WA flutuante: some quando o formulário está na tela (não cobre o envio) ========== */
+  var fl = document.querySelector(".wa-float"), form = document.getElementById("quote");
+  if("IntersectionObserver" in window){
+    new IntersectionObserver(function(es){ fl.classList.toggle("hide", es[0].isIntersecting && mobile.matches); }, {threshold:.15}).observe(form);
+  }
+
+  /* ========== FORMULÁRIO → WhatsApp ========== */
+  var fNome = document.getElementById("f-nome"), fEmp = document.getElementById("f-empresa"), fTel = document.getElementById("f-tel"),
+      fServ = document.getElementById("f-servico"), fDesc = document.getElementById("f-desc"), fArq = document.getElementById("f-arq"),
+      waFinal = document.getElementById("waFinal"), status = document.getElementById("formStatus"),
+      fileNote = document.getElementById("fileNote"), fileName = document.getElementById("fileName");
+  var started = false;
+  form.addEventListener("input", function(){ if(!started){ started = true; track("form_start", {form:"orcamento"}); } refresh(); });
+  form.addEventListener("change", refresh);
+  fArq.addEventListener("change", function(){
+    var f = fArq.files && fArq.files[0];
+    fileNote.hidden = !f; fileName.textContent = f ? f.name : "";
+  });
+
+  function setErr(input, id, msg){
+    var fld = input.closest(".fld"), e = document.getElementById(id);
+    if(msg){ fld.setAttribute("data-err",""); e.textContent = msg; input.setAttribute("aria-invalid","true"); input.setAttribute("aria-describedby", id); }
+    else { fld.removeAttribute("data-err"); e.textContent = ""; input.removeAttribute("aria-invalid"); }
+  }
+  function validate(){
+    var ok = true, first = null;
+    if(fNome.value.trim().length < 2){ setErr(fNome,"e-nome","Informe seu nome."); ok = false; first = first || fNome; } else setErr(fNome,"e-nome");
+    var digits = fTel.value.replace(/\D/g,"");
+    if(fTel.value.trim() && (digits.length < 10 || digits.length > 13)){ setErr(fTel,"e-tel","Use DDD + número, ex.: (11) 91234-5678."); ok = false; first = first || fTel; } else setErr(fTel,"e-tel");
+    if(!fServ.value){ setErr(fServ,"e-servico","Selecione o serviço."); ok = false; first = first || fServ; } else setErr(fServ,"e-servico");
+    return {ok:ok, first:first};
+  }
+  function buildMsg(){
+    var L = ["Olá! Gostaria de solicitar um orçamento com a Fabrimak.", ""];
+    L.push("*Nome:* " + fNome.value.trim());
+    if(fEmp.value.trim()) L.push("*Empresa:* " + fEmp.value.trim());
+    if(fTel.value.trim()) L.push("*Telefone:* " + fTel.value.trim());
+    L.push("*Serviço:* " + fServ.value);
+    if(fDesc.value.trim()) L.push("*Projeto:* " + fDesc.value.trim());
+    var f = fArq.files && fArq.files[0];
+    if(f) L.push("", "Vou enviar o arquivo " + f.name + " nesta conversa.");
+    return L.join("\n");
+  }
+  function refresh(){ waFinal.href = fNome.value.trim() && fServ.value ? waUrl(buildMsg()) : waUrl(MSG.chamada_final); }
+
+  function sendToEndpoint(){
+    if(!FORM_ENDPOINT) return;
+    try{
+      fetch(FORM_ENDPOINT, {method:"POST", headers:{"Content-Type":"application/json"}, body: JSON.stringify({nome:fNome.value, empresa:fEmp.value, telefone:fTel.value, servico:fServ.value, descricao:fDesc.value})})
+        .then(function(r){ if(r.ok) track("form_submit_confirmed", {form:"orcamento", servico:fServ.value}); })
+        .catch(function(){});
+    }catch(e){}
+  }
+  waFinal.addEventListener("click", function(e){
+    var r = validate();
+    if(!r.ok){ e.preventDefault(); status.textContent = "Revise os campos destacados para continuar."; r.first.focus(); return; }
+    waFinal.href = waUrl(buildMsg());
+    status.textContent = (fArq.files && fArq.files[0]) ? "Abrindo o WhatsApp. Lembre-se de anexar o arquivo na conversa." : "Abrindo o WhatsApp com a sua mensagem.";
+    track("whatsapp_click", {cta_location:"chamada_final"});
+    track("form_complete", {form:"orcamento", servico:fServ.value});
+    sendToEndpoint();
+  });
+  form.addEventListener("submit", function(e){ e.preventDefault(); waFinal.click(); });
+
+  document.getElementById("yr").textContent = new Date().getFullYear();
+
+  /* Mapa: carrega o Google Maps no site publicado. Na prévia do Claude (que bloqueia conteúdo externo) fica o cartão com link. */
+  var mapFrame = document.querySelector(".map-box iframe[data-src]");
+  if(mapFrame && !/claude|anthropic/i.test(location.hostname)){
+    mapFrame.src = mapFrame.getAttribute("data-src"); mapFrame.hidden = false;
+  }
+})();
+</script>
+
+</body>
+</html>
