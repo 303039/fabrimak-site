@@ -328,6 +328,15 @@ section.band{position:relative;padding-block:clamp(72px,10vw,136px);overflow:hid
 .talk p{font-size:clamp(18px,2vw,24px);font-weight:800;max-width:40ch}
 .talk p span{display:block;font-size:15px;font-weight:500;color:var(--muted-d);margin-top:4px}
 
+/* --- entrega --- */
+.deliv-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,5vw,72px);align-items:end;margin-bottom:clamp(28px,4vw,48px)}
+.deliv-txt{display:grid;gap:16px;font-size:17px;color:var(--muted);justify-items:start}
+.deliv-note{display:grid;grid-template-columns:22px 1fr;gap:10px;align-items:start;padding:14px 16px;background:var(--white);border-left:3px solid var(--spark);font-size:15px;color:var(--text)}
+.deliv-note svg{width:20px;height:20px;color:var(--spark);margin-top:2px}
+.deliv-img{margin:0;position:relative;max-width:100%;clip-path:polygon(3% 0,100% 0,97% 100%,0 100%);background:var(--paper)}
+.deliv-img img{width:100%;height:auto;aspect-ratio:1600/603;object-fit:cover}
+@media (max-width:900px){.deliv-head{grid-template-columns:1fr}.deliv-img{clip-path:none}}
+
 /* --- segmentos --- */
 .seg-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
 .seg{display:grid;grid-template-columns:44px 1fr;gap:16px;align-items:start;padding:22px;background:var(--white);border-left:3px solid var(--navy)}
@@ -678,6 +687,26 @@ footer{background:#0a0a14;color:var(--muted-d);padding-block:64px calc(40px + en
   </div>
 </section>
 
+<!-- ================= ENTREGA ================= -->
+<section class="band on-light-2" id="entrega">
+  <div class="wrap">
+    <div class="deliv-head">
+      <div class="sec-head" style="margin-bottom:0">
+        <p class="tag"><b>//</b> Entrega</p>
+        <h2 class="h2">Suas peças entregues na sua empresa.</h2>
+      </div>
+      <div class="deliv-txt">
+        <p>A Fabrimak faz a entrega das peças prontas, para você não precisar buscar nem contratar frete.</p>
+        <p class="deliv-note"><svg aria-hidden="true" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/></svg><span><strong>A entrega não atende todas as cidades.</strong> Consulte a disponibilidade para a sua região ao solicitar o orçamento.</span></p>
+        <a class="link-arrow" href="#orcamento">Consultar entrega no orçamento <svg width="18" height="18" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </div>
+    </div>
+    <figure class="deliv-img">
+      <img src="media/entrega.webp" srcset="media/entrega-900.webp 900w, media/entrega.webp 1600w" sizes="(max-width: 900px) 100vw, 1240px" alt="Caminhões e picape brancos com a marca Fabrimak, usados na entrega das peças" width="1600" height="603" loading="lazy" decoding="async">
+    </figure>
+  </div>
+</section>
+
 <!-- ================= 8. SEGMENTOS ================= -->
 <!-- VALIDAR com a Fabrimak quais segmentos são efetivamente atendidos -->
 <section class="band on-light" id="segmentos">
@@ -709,7 +738,7 @@ footer{background:#0a0a14;color:var(--muted-d);padding-block:64px calc(40px + en
       <li class="step"><h3>Entre em contato</h3><p>Conte qual serviço você precisa e qual é a sua necessidade.</p></li>
       <li class="step"><h3>Envie as informações do projeto</h3><p>Compartilhe desenhos técnicos, medidas, arquivos e outras informações para a avaliação.</p></li>
       <li class="step"><h3>Conferência e alinhamento</h3><p>A equipe verifica as informações e esclarece eventuais dúvidas técnicas.</p></li>
-      <li class="step"><h3>Orçamento e planejamento</h3><p>Condições, serviços necessários e prazos são alinhados com você.</p></li>
+      <li class="step"><h3>Orçamento e planejamento</h3><p>Condições, serviços necessários, prazos e entrega são alinhados com você.</p></li>
     </ol>
     <div class="steps-cta">
       <a class="link-arrow" href="#orcamento">Começar pelo passo 1 <svg width="18" height="18" aria-hidden="true"><use href="#i-arrow"/></svg></a>
@@ -734,7 +763,7 @@ footer{background:#0a0a14;color:var(--muted-d);padding-block:64px calc(40px + en
       <details><summary>A Fabrimak realiza corte a laser, dobra e soldagem?</summary><div class="ans"><p>Sim. Os serviços podem ser contratados separadamente ou combinados, conforme a necessidade do projeto.</p></div></details>
       <!-- EDITAR: substituir pela lista real de materiais e espessuras após confirmação técnica -->
       <details><summary>Quais materiais e espessuras podem ser trabalhados?</summary><div class="ans"><p>Os materiais e as espessuras dependem de cada serviço e são confirmados pela equipe durante o atendimento. Informe essas características ao solicitar o orçamento.</p></div></details>
-      <details><summary>Como são definidos os prazos de produção e entrega?</summary><div class="ans"><p>Os prazos dependem do projeto, da quantidade e dos serviços envolvidos. Eles são alinhados com você antes do início da produção.</p></div></details>
+      <details><summary>Como são definidos os prazos de produção e entrega?</summary><div class="ans"><p>Os prazos dependem do projeto, da quantidade e dos serviços envolvidos. Eles são alinhados com você antes do início da produção.</p><p>A Fabrimak também faz a entrega das peças, mas ela não atende todas as cidades. Consulte a disponibilidade para a sua região ao solicitar o orçamento.</p></div></details>
       <details><summary>A empresa atende projetos sob medida?</summary><div class="ans"><p>Sim. As peças são fabricadas conforme as especificações de cada projeto.</p></div></details>
       <details><summary>Como entrar em contato com a equipe?</summary><div class="ans"><p>Pelo WhatsApp, usando o botão fixo no canto da tela ou os botões de orçamento ao longo da página.</p></div></details>
     </div>
