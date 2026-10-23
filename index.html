@@ -419,6 +419,9 @@ footer{background:#0a0a14;color:var(--muted-d);padding-block:64px calc(40px + en
 .ft .about-ft{display:grid;gap:16px;align-content:start}
 .ft .pending{font-family:var(--f-mono);font-size:12px;color:rgba(255,255,255,.4)}
 .map-li{display:grid;gap:10px;margin-block:4px}
+.tel-li{display:flex;gap:8px;align-items:center;color:rgba(255,255,255,.85)}
+.tel-li svg{width:18px;height:18px;color:var(--wa);flex:none}
+.tel-li strong{color:var(--white);user-select:all}
 .map-box{position:relative;width:100%;max-width:100%;aspect-ratio:16/10;background:var(--navy);border:1px solid var(--line-d);overflow:hidden}
 .map-box iframe{position:absolute;inset:0;width:100%;height:100%;border:0;z-index:1}
 .map-fallback{position:absolute;inset:0;display:grid;place-content:center;justify-items:center;gap:6px;text-align:center;text-decoration:none;color:var(--white);background:
@@ -837,7 +840,7 @@ footer{background:#0a0a14;color:var(--muted-d);padding-block:64px calc(40px + en
         <h3>Contato</h3>
         <!-- PREENCHER com dados reais: telefone, WhatsApp, e-mail, redes sociais. Localização: -28.2882214, -49.1359825 -->
         <ul>
-          <li class="pending">Telefone / WhatsApp: a definir</li>
+          <li class="tel-li"><svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-wa"/></svg><span>WhatsApp: <strong>(48) 99604-8552</strong></span></li>
           <li class="pending">E-mail comercial: a definir</li>
           <li class="map-li">
             <div class="map-box">
@@ -864,7 +867,7 @@ footer{background:#0a0a14;color:var(--muted-d);padding-block:64px calc(40px + en
 (function(){
   "use strict";
   /* ========== CONFIG ========== */
-  var WHATSAPP_NUMBER = "SEU_LINK_DO_WHATSAPP";   // ex.: 5511999999999 (somente dígitos)
+  var WHATSAPP_NUMBER = "5548996048552";   // (48) 99604-8552 — somente dígitos, com 55 + DDD
   var FORM_ENDPOINT = "";                          // opcional: URL que recebe o formulário (POST JSON). Vazio = sem integração.
 
   var MSG = {
