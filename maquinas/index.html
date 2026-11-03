@@ -111,6 +111,26 @@ p{margin:0}
 .stage-dots button[aria-current="true"]{background:var(--navy);width:44px}
 .vid-note{position:absolute;z-index:3;left:18px;bottom:18px;font:500 10px/1 var(--f-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted);background:rgba(255,255,255,.7);padding:6px 10px;border-radius:99px}
 @media (max-width:960px){.hero-grid{grid-template-columns:1fr;padding-top:124px;padding-bottom:90px;gap:48px}.cf1{left:10px}.cf2{right:10px}}
+/* ===== hero com vídeo: palco fixo enquanto o vídeo avança com a rolagem ===== */
+.hero-pin{position:relative}
+@media (min-width:961px){
+  .hero-pin{height:300vh}
+  .hero{position:sticky;top:0;height:100vh;height:100svh}
+  .hero-grid{height:100%;padding-top:110px;padding-bottom:40px}
+}
+.stage-card.vid{aspect-ratio:9/16;max-height:min(78vh,760px);width:auto;margin-inline:auto;background:#0b0c16;transform-origin:50% 60%;will-change:transform}
+.stage-card.vid::after{display:none}
+.stage-card.vid video,.stage-card.vid .vposter{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:inherit;opacity:1;transform:none;filter:none;mix-blend-mode:normal}
+.stage-card.vid video{z-index:1}
+.vbar{position:absolute;z-index:3;left:16px;right:16px;bottom:14px;height:3px;border-radius:99px;background:rgba(255,255,255,.25);overflow:hidden}
+.vbar i{position:absolute;inset:0;transform-origin:left;transform:scaleX(0);background:linear-gradient(90deg,#fff,var(--spark))}
+.chip-float{transition:transform .2s linear}
+.scroll-cue{position:absolute;left:50%;bottom:22px;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:8px;font:500 11px/1 var(--f-mono);letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.55);transition:opacity .4s}
+.scroll-cue span{width:22px;height:34px;border-radius:12px;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.5);position:relative}
+.scroll-cue span::after{content:"";position:absolute;left:50%;top:7px;width:3px;height:7px;margin-left:-1.5px;border-radius:2px;background:#fff;animation:cue 1.6s ease-in-out infinite}
+@keyframes cue{0%{opacity:0;transform:translateY(0)}40%{opacity:1}100%{opacity:0;transform:translateY(10px)}}
+@media (max-width:960px){.scroll-cue{display:none}.stage-card.vid{max-height:none;width:100%;max-width:440px}}
+
 @media (max-width:520px){.chip-float{font-size:11px;padding:8px 10px}.cf2{top:auto;bottom:22%}}
 
 /* ===== light sections ===== */
@@ -343,11 +363,11 @@ dialog.mdlg::backdrop{background:rgba(11,12,22,.6);backdrop-filter:blur(6px)}
 </header>
 
 <main id="conteudo">
-<!-- ===== 1. HERO ===== -->
-<!-- VÍDEO: quando chegarem os vídeos das máquinas, o palco abaixo recebe o vídeo com scroll -->
+<!-- ===== 1. HERO (vídeo real com scroll) ===== -->
+<div class="hero-pin" id="heroPin">
 <section class="hero" id="inicio" aria-label="Apresentação">
   <div class="hero-grid">
-    <div class="hero-copy">
+    <div class="hero-copy" id="heroCopy">
       <span class="eyebrow">Equipamentos para frigoríficos</span>
       <h1>Equipamentos em inox para a sua <span class="acc">produção de alimentos.</span></h1>
       <p class="lead">Máquinas Fabrimak para processamento de carnes, cozimento, abate e higiene, com construção em aço inox e projetos que atendem à NR-12.</p>
@@ -358,22 +378,21 @@ dialog.mdlg::backdrop{background:rgba(11,12,22,.6);backdrop-filter:blur(6px)}
       <div class="trust"><span class="pill"><i></i>Fabricação própria</span><span class="pill">Inox AISI 304</span><span class="pill">NR-12</span></div>
     </div>
     <div class="stage" id="stage">
-      <div class="stage-card" id="stageCard" aria-label="Alguns equipamentos da linha Fabrimak">
-        <img src="media/maquinas/misturador.webp" alt="Misturador de Carne e Massas Fabrimak" data-nome="Misturador de Carne e Massas" width="800" height="800" class="on" fetchpriority="high">
-        <img src="media/maquinas/tumbler.webp" alt="Tumbler Massageador Fabrimak" data-nome="Tumbler Massageador" width="800" height="800" loading="lazy">
-        <img src="media/maquinas/embutidora.webp" alt="Embutidora Hidráulica Fabrimak" data-nome="Embutidora Hidráulica" width="800" height="800" loading="lazy">
-        <img src="media/maquinas/serra-fita.webp" alt="Serra Fita Frigorífico Industrial Fabrimak" data-nome="Serra Fita Frigorífico Industrial" width="800" height="800" loading="lazy">
-        <img src="media/maquinas/moedor.webp" alt="Moedor de Carne Fabrimak" data-nome="Moedor de Carne" width="800" height="800" loading="lazy">
-        <div class="stage-dots" id="stageDots" role="group" aria-label="Escolher equipamento em destaque"><button type="button" aria-label="Misturador de Carne e Massas" aria-current="true"></button><button type="button" aria-label="Tumbler Massageador" aria-current="false"></button><button type="button" aria-label="Embutidora Hidráulica" aria-current="false"></button><button type="button" aria-label="Serra Fita Frigorífico Industrial" aria-current="false"></button><button type="button" aria-label="Moedor de Carne" aria-current="false"></button></div>
-        <span class="stage-name" id="stageName">Misturador de Carne e Massas</span>
-        <span class="vid-note">Vídeo das máquinas entra aqui</span>
+      <div class="stage-card vid" id="stageCard">
+        <img class="vposter" src="media/depiladeira-poster.jpg" alt="Depiladeira industrial Fabrimak" width="540" height="960" fetchpriority="high">
+        <video id="hv" muted playsinline loop preload="auto" poster="media/depiladeira-poster.jpg" aria-label="Vídeo: Depiladeira Industrial Fabrimak em funcionamento" disablepictureinpicture>
+          <source src="media/depiladeira-hero.mp4" type="video/mp4">
+        </video>
+        <div class="vbar" aria-hidden="true"><i id="vbar"></i></div>
       </div>
-      <span class="chip-float cf1"><b>//</b> Inox AISI 304</span>
-      <span class="chip-float cf2"><b>//</b> Segurança NR-12</span>
-      <span class="chip-float cf3"><b>//</b> 20 equipamentos</span>
+      <span class="chip-float cf1" data-par="-40"><b>//</b> Depiladeira industrial</span>
+      <span class="chip-float cf2" data-par="30"><b>//</b> Até 120 suínos/h</span>
+      <span class="chip-float cf3" data-par="-20"><b>//</b> Role para ver</span>
     </div>
   </div>
+  <div class="scroll-cue" id="scrollCue" aria-hidden="true"><span></span>Role</div>
 </section>
+</div>
 
 <!-- ===== 2. SELOS ===== -->
 <div class="on-light" style="padding-bottom:20px">
@@ -837,18 +856,35 @@ dialog.mdlg::backdrop{background:rgba(11,12,22,.6);backdrop-filter:blur(6px)}
   function onScroll(){ hdr.classList.toggle("solid", window.scrollY > 40); }
   window.addEventListener("scroll", onScroll, {passive:true}); onScroll();
 
-  /* palco do hero: troca automática + seleção + inclinação 3D com o mouse */
+  /* hero: vídeo avança com a rolagem (computador); no celular toca em loop */
   var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  var shots = [].slice.call(document.querySelectorAll("#stageCard img")), dots = [].slice.call(document.querySelectorAll("#stageDots button")), name = document.getElementById("stageName"), si = 0, timer;
-  function show(i){ shots[si].classList.remove("on"); dots[si].setAttribute("aria-current","false"); si = i; shots[si].classList.add("on"); dots[si].setAttribute("aria-current","true"); name.textContent = shots[si].dataset.nome; }
-  function auto(){ clearInterval(timer); if(!reduce) timer = setInterval(function(){ show((si+1) % shots.length); }, 3600); }
-  dots.forEach(function(d,i){ d.addEventListener("click", function(){ show(i); auto(); }); });
-  auto();
-  var stage = document.getElementById("stage"), card = document.getElementById("stageCard");
-  if(!reduce && window.matchMedia("(hover:hover)").matches){
-    stage.addEventListener("mousemove", function(e){ var r = stage.getBoundingClientRect(), x = (e.clientX - r.left)/r.width - .5, y = (e.clientY - r.top)/r.height - .5; card.style.transform = "rotateY(" + (x*8) + "deg) rotateX(" + (-y*8) + "deg)"; });
-    stage.addEventListener("mouseleave", function(){ card.style.transform = ""; });
+  var pin = document.getElementById("heroPin"), v = document.getElementById("hv"), card = document.getElementById("stageCard"),
+      bar = document.getElementById("vbar"), cue = document.getElementById("scrollCue"), copy = document.getElementById("heroCopy"),
+      chips = [].slice.call(document.querySelectorAll(".chip-float[data-par]")), desk = window.matchMedia("(min-width:961px)");
+  var dur = 25, ready = false, target = 0, cur = 0, looping = false;
+  v.addEventListener("loadedmetadata", function(){ dur = v.duration || dur; ready = true; });
+  function play(){ if(!looping){ looping = true; var pr = v.play(); if(pr && pr.catch) pr.catch(function(){ looping = false; }); } }
+  function prog(){ var r = pin.getBoundingClientRect(), t = pin.offsetHeight - window.innerHeight; return t > 0 ? Math.min(1, Math.max(0, -r.top / t)) : 0; }
+  function frame(){
+    if(desk.matches && !reduce){
+      var p = prog();
+      if(p < .02){ play(); }
+      else { if(looping){ looping = false; v.pause(); cur = v.currentTime; } target = Math.min(dur - .05, ((p - .02)/.98) * dur); }
+      if(!looping && ready){ cur += (target - cur) * .2; if(Math.abs(target - cur) > .01 && !v.seeking){ try{ v.currentTime = cur; }catch(e){} } }
+      var e = Math.min(1, p * 3);
+      card.style.transform = "perspective(1200px) rotateX(" + (10 - 10*e) + "deg) scale(" + (.9 + .1*e) + ")";
+      chips.forEach(function(c){ c.style.transform = "translate3d(0," + (p * +c.dataset.par * 4) + "px,60px)"; });
+      copy.style.opacity = String(1 - Math.max(0, p - .55) * 1.6);
+      cue.style.opacity = p > .03 ? "0" : "1";
+      bar.style.transform = "scaleX(" + (looping ? (v.currentTime / dur) : p) + ")";
+    } else {
+      card.style.transform = ""; copy.style.opacity = ""; chips.forEach(function(c){ c.style.transform = ""; });
+      if(!reduce) play();
+      bar.style.transform = "scaleX(" + ((v.currentTime || 0) / dur) + ")";
+    }
+    requestAnimationFrame(frame);
   }
+  requestAnimationFrame(frame);
 
   /* filtro */
   var segs = [].slice.call(document.querySelectorAll(".seg button")), cards = [].slice.call(document.querySelectorAll(".mcard"));
