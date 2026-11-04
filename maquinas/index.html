@@ -138,24 +138,24 @@ p{margin:0}
 .vcap .eyebrow{color:rgba(255,255,255,.85)}
 /* ===== HERO: cartão de vídeo criativo ===== */
 @property --ang{syntax:"<angle>";inherits:false;initial-value:0deg}
-.vstage{position:relative;perspective:1400px;justify-self:center;width:min(100%,460px)}
-.vframe{position:relative;aspect-ratio:4/5;border-radius:34px;padding:2px;background:conic-gradient(from var(--ang),rgba(255,106,31,.0) 0deg,rgba(255,106,31,.9) 60deg,rgba(130,128,230,.9) 160deg,rgba(255,255,255,.0) 240deg,rgba(255,106,31,.0) 360deg);animation:spin 6s linear infinite;box-shadow:0 50px 100px -40px rgba(0,0,0,.9),0 0 90px -20px rgba(110,108,220,.55);transform-style:preserve-3d;transition:transform .5s var(--ease);will-change:transform}
+.vstage{position:relative;perspective:1400px;justify-self:center;width:min(100%,400px,calc(min(72vh,700px) * 9 / 16))}
+.vframe{position:relative;aspect-ratio:9/16;border-radius:34px;padding:2px;background:conic-gradient(from var(--ang),rgba(255,106,31,.0) 0deg,rgba(255,106,31,.9) 60deg,rgba(130,128,230,.9) 160deg,rgba(255,255,255,.0) 240deg,rgba(255,106,31,.0) 360deg);animation:spin 6s linear infinite;box-shadow:0 50px 100px -40px rgba(0,0,0,.9),0 0 90px -20px rgba(110,108,220,.55);transform-style:preserve-3d;transition:transform .5s var(--ease);will-change:transform}
 @keyframes spin{to{--ang:360deg}}
 .vframe-in{position:absolute;inset:2px;border-radius:32px;overflow:hidden;background:#0b0c16}
-.vframe-in video{width:100%;height:100%;object-fit:cover;object-position:50% 55%}
+.vframe-in video{width:100%;height:100%;object-fit:cover;object-position:50% 50%}
 .vglare{position:absolute;inset:0;background:linear-gradient(115deg,rgba(255,255,255,.18) 0%,rgba(255,255,255,0) 35%),linear-gradient(0deg,rgba(0,0,0,.35),rgba(0,0,0,0) 35%);pointer-events:none}
 .vlive{position:absolute;left:16px;bottom:16px;display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:99px;background:rgba(11,12,22,.55);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);font:600 12px/1 var(--f-body);color:#fff;box-shadow:inset 0 0 0 1px rgba(255,255,255,.15)}
 .vlive i{width:8px;height:8px;border-radius:50%;background:#ff4d3d;box-shadow:0 0 0 0 rgba(255,77,61,.6);animation:pulse 1.6s ease-out infinite}
 @keyframes pulse{70%{box-shadow:0 0 0 8px rgba(255,77,61,0)}100%{box-shadow:0 0 0 0 rgba(255,77,61,0)}}
 .vtag{position:absolute;z-index:3;padding:10px 14px;border-radius:14px;background:rgba(20,21,42,.6);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);color:#fff;font:500 12px/1.2 var(--f-mono);letter-spacing:.04em;box-shadow:0 14px 30px -14px rgba(0,0,0,.7),inset 0 0 0 1px rgba(255,255,255,.14);opacity:0;animation:tagIn .8s var(--ease) forwards,bob 6s ease-in-out infinite}
 .vtag b{color:var(--spark);font-weight:500}
-.t1{left:-56px;top:14%;animation-delay:.6s,1.4s}
+.t1{left:-56px;top:21%;animation-delay:.6s,1.4s}
 .t2{right:-48px;top:44%;animation-delay:1s,2s}
 .t3{left:-30px;bottom:12%;animation-delay:1.4s,2.6s}
 @keyframes tagIn{from{opacity:0;transform:translateY(14px) scale(.96)}to{opacity:1;transform:none}}
 @keyframes bob{0%,100%{translate:0 0}50%{translate:0 -8px}}
 .vfloor{position:absolute;left:10%;right:10%;bottom:-40px;height:60px;border-radius:50%;background:radial-gradient(closest-side,rgba(130,128,230,.45),transparent);filter:blur(10px);z-index:-1}
-@media (max-width:960px){.vstage{width:min(100%,420px)}.t1{left:-8px}.t2{right:-8px}.t3{left:0}}
+@media (max-width:960px){.vstage{width:min(100%,360px)}.vtag{display:none}}
 @media (max-width:420px){.vtag{font-size:11px;padding:8px 10px}}
 @media (prefers-reduced-motion:reduce){.vframe{animation:none}.vtag{opacity:1;animation:none}}
 
@@ -195,7 +195,7 @@ p{margin:0}
 }
 @media (prefers-reduced-motion:reduce){.vhero .vhero-mask,.vhero-skip{display:none}.vhero-v{transform:none}.vhero-shade,.vhero-copy>*{opacity:1;transform:none}}
 
-.vbg{position:absolute;inset:-8%;width:116%;height:116%;z-index:0;filter:blur(28px) saturate(1.2) brightness(.7);background:#1b1c30 url("media/depiladeira-poster.jpg") center/cover}
+.vbg{position:absolute;inset:-8%;width:116%;height:116%;z-index:0;filter:blur(28px) saturate(1.2) brightness(.7);background:#1b1c30 url("media/maquinas-poster.jpg") center/cover}
 .vbg-shade{position:absolute;inset:0;z-index:0;background:radial-gradient(60% 80% at 50% 50%,transparent 30%,rgba(11,12,22,.55) 100%)}
 .stage-card.vid .vposter{z-index:1}
 .stage-card.vid video{z-index:1;filter:drop-shadow(0 20px 40px rgba(0,0,0,.5))}
@@ -446,7 +446,7 @@ dialog.mdlg::backdrop{background:rgba(11,12,22,.6);backdrop-filter:blur(6px)}
 
 <main id="conteudo">
 <!-- ===== 1. HERO: texto + vídeo em cartão ===== -->
-<!-- VÍDEO: troque media/depiladeira-hero.mp4 pelo vídeo final com todas as máquinas -->
+<!-- VÍDEO: troque media/maquinas-hero.mp4 pelo vídeo final com todas as máquinas -->
 <section class="hero" id="inicio" aria-label="Apresentação">
   <div class="hero-grid">
     <div class="hero-copy">
@@ -462,8 +462,8 @@ dialog.mdlg::backdrop{background:rgba(11,12,22,.6);backdrop-filter:blur(6px)}
     <div class="vstage" id="vstage">
       <div class="vframe" id="vframe">
         <div class="vframe-in">
-          <video id="hv" muted playsinline loop autoplay preload="auto" poster="media/depiladeira-poster.jpg" aria-label="Vídeo: equipamentos Fabrimak em funcionamento" disablepictureinpicture>
-            <source src="media/depiladeira-hero.mp4" type="video/mp4">
+          <video id="hv" muted playsinline loop autoplay preload="auto" poster="media/maquinas-poster.jpg" aria-label="Vídeo: equipamentos Fabrimak em funcionamento" disablepictureinpicture>
+            <source src="media/maquinas-hero.mp4" type="video/mp4">
           </video>
           <span class="vglare" aria-hidden="true"></span>
           <span class="vlive"><i></i>Em funcionamento</span>
