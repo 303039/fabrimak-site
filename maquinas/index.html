@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Fabrimak | Equipamentos para Frigoríficos</title>
-<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://fabrimak.ind.br/maquinas/">
 <meta name="description" content="Equipamentos Fabrimak para frigoríficos e indústrias de alimentos: cubetadeira, moedor, misturador, embutidora, tumbler, serra fita, tachos, depiladeira e mais. Solicite orçamento pelo WhatsApp.">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Fabrimak | Equipamentos para Frigoríficos">
@@ -75,6 +75,24 @@ p{margin:0}
 .logo .logo-mark{height:44px;width:112px;display:block}
 .hdr .btn{--h:46px;margin-left:auto;font-size:14px;padding:0 20px}
 @media (max-width:520px){.hdr-in{height:60px;padding-left:16px}.logo .logo-mark{height:36px;width:92px}.hdr .btn{--h:42px;font-size:13px;padding:0 16px}}
+
+
+/* menu entre as páginas */
+.pnav{display:flex;align-items:center;gap:2px;margin-left:auto}
+.pnav a{padding:11px 14px;border-radius:999px;font:600 14px/1 var(--f-body);color:rgba(255,255,255,.72);text-decoration:none;transition:background .25s,color .25s;white-space:nowrap}
+.pnav a:hover{color:#fff;background:rgba(255,255,255,.08)}
+.pnav a[aria-current="page"]{color:#fff;background:rgba(255,255,255,.12)}
+.hdr .btn.btn-light{margin-left:10px}
+.pburger{display:none;margin-left:auto;width:46px;height:46px;border-radius:50%;border:0;background:rgba(255,255,255,.08);color:#fff;cursor:pointer;place-items:center}
+.pburger svg{width:22px;height:22px}
+.pburger .x{display:none}
+.hdr.open .pburger .x{display:block}.hdr.open .pburger .bars{display:none}
+.pmnav{pointer-events:auto;display:none;max-width:1180px;margin:10px auto 0;padding:10px;border-radius:26px;background:rgba(11,12,22,.94);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);box-shadow:inset 0 0 0 1px rgba(255,255,255,.1),0 30px 60px -30px rgba(0,0,0,.8)}
+.pmnav a{display:flex;justify-content:space-between;align-items:center;padding:16px 18px;border-radius:18px;font:600 16px/1.2 var(--f-body);color:#fff;text-decoration:none}
+.pmnav a:hover,.pmnav a[aria-current="page"]{background:rgba(255,255,255,.07)}
+.pmnav a svg{width:18px;height:18px;color:var(--spark)}
+.pmnav .btn{width:100%;margin:8px 0 2px;justify-content:center}
+@media (max-width:1080px){.pnav{display:none}.pburger{display:grid}.hdr .btn.btn-light{display:none}.hdr.open .pmnav{display:block}}
 
 /* ===== HERO ===== */
 .hero{position:relative;overflow:hidden;isolation:isolate;background:var(--ink)}
@@ -439,9 +457,25 @@ dialog.mdlg::backdrop{background:rgba(11,12,22,.6);backdrop-filter:blur(6px)}
 <header class="hdr" id="topo">
   <div class="hdr-in">
     <a class="logo" href="#inicio" aria-label="Fabrimak, voltar ao início"><svg class="logo-mark" aria-hidden="true"><use href="#i-logo"/></svg></a>
-    <!-- Menu entre as 3 páginas entra aqui, centralizado na cápsula, na publicação final -->
+    <nav class="pnav" aria-label="Páginas do site">
+      <a href="/">Início</a>
+      <a href="#inicio" aria-current="page">Máquinas para Frigoríficos</a>
+      <a href="/corte-e-dobra/">Corte e Dobra</a>
+      <a href="#orcamento">Contato</a>
+    </nav>
     <a class="btn btn-light" href="#orcamento">Solicitar orçamento</a>
+    <button class="pburger" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="pmnav">
+      <svg class="bars" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/></svg>
+      <svg class="x" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/></svg>
+    </button>
   </div>
+  <nav class="pmnav" id="pmnav" aria-label="Páginas do site">
+    <a href="/">Início <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    <a href="#inicio" aria-current="page">Máquinas para Frigoríficos <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    <a href="/corte-e-dobra/">Corte e Dobra <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    <a href="#orcamento">Contato <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    <a class="btn btn-wa" data-wa="menu" href="#"><svg aria-hidden="true"><use href="#i-wa"/></svg>Falar no WhatsApp</a>
+  </nav>
 </header>
 
 <main id="conteudo">
@@ -920,7 +954,8 @@ dialog.mdlg::backdrop{background:rgba(11,12,22,.6);backdrop-filter:blur(6px)}
     hero: "Olá! Gostaria de solicitar um orçamento de equipamentos com a Fabrimak.",
     diferenciais: "Olá! Gostaria de ajuda para escolher um equipamento Fabrimak para a minha produção.",
     chamada_final: "Olá! Gostaria de solicitar um orçamento de equipamentos com a Fabrimak.",
-    flutuante: "Olá! Gostaria de informações sobre os equipamentos da Fabrimak."
+    flutuante: "Olá! Gostaria de informações sobre os equipamentos da Fabrimak.",
+    menu: "Olá! Gostaria de informações sobre os equipamentos da Fabrimak."
   };
   function waUrl(t){ return "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(t); }
   function msgEquip(n){ return "Olá! Tenho interesse no equipamento " + n + " da Fabrimak. Gostaria de um orçamento."; }
@@ -936,6 +971,11 @@ dialog.mdlg::backdrop{background:rgba(11,12,22,.6);backdrop-filter:blur(6px)}
 
   var hdr = document.querySelector(".hdr");
   function onScroll(){ hdr.classList.toggle("solid", window.scrollY > 40); }
+  var pb = document.querySelector(".pburger");
+  function setMenu(o){ hdr.classList.toggle("open", o); pb.setAttribute("aria-expanded", o ? "true" : "false"); pb.setAttribute("aria-label", o ? "Fechar menu" : "Abrir menu"); }
+  pb.addEventListener("click", function(){ setMenu(!hdr.classList.contains("open")); });
+  document.querySelectorAll(".pmnav a").forEach(function(a){ a.addEventListener("click", function(){ setMenu(false); }); });
+  document.addEventListener("keydown", function(e){ if(e.key === "Escape") setMenu(false); });
   window.addEventListener("scroll", onScroll, {passive:true}); onScroll();
 
   /* hero: vídeo em loop + inclinação 3D do cartão seguindo o mouse */
